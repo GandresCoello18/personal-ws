@@ -1,33 +1,9 @@
-import { GetServerSideProps } from 'next';
 import React from 'react';
 import { NextSeo } from 'next-seo';
 import { CardProyect } from '../components/card/cardProyect';
 import { Layout } from '../components/layout'
-import { Proyecto } from '../interfaces/proyecto';
 
-export const getServerSideProps: GetServerSideProps<{}> = async () => {
-    const res = await fetch(`http://localhost:3000/api/hello`);
-    const {data} = await res.json()
-    const user = undefined;
-
-    if (!user) {
-        return {
-            notFound: true
-        }
-    }
-
-    return {
-        props: {
-            data
-        }
-    }
-};
-
-type Props = {
-    data: Proyecto[]
-}
-
-const PagePortafolio = ({data}: Props) => {
+const PagePortafolio = () => {
     return (
         <Layout>
             <NextSeo
@@ -58,21 +34,12 @@ const PagePortafolio = ({data}: Props) => {
                 }}
             />
 
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <div className="md:p-4 p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {data.map(proyect => (
-                    <a key={proyect.id_proyecto} href={proyect.enlace_pry} target='_blank' className='mb-4' rel="noreferrer">
-                        <CardProyect data={proyect} />
-                    </a>
-                ))}
-            </div>
-            <br />
-            <br />
-            <br />
+            <section className='mt-28 mb-12'>
+                <h1 className='text-center p-5 mb-10 text-4xl'>Portafolio</h1>
+                <div className="md:p-4 p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    {[1,2,3,4].map((proyect: number) => <CardProyect key={proyect} />)}
+                </div>
+            </section>
         </Layout>
     )
 }

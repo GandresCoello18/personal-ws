@@ -16,7 +16,7 @@ a {
 }
 
 .gradient {
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background: linear-gradient(90deg, #577a96  0%, #f87145 100%);
 }
 
 @tailwind base;
