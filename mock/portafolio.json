@@ -1,0 +1,25 @@
+{
+    "proyectos": [
+        {
+            "title": "Meniuz App",
+            "description": "Aplicación móvil y web la cual recopila menús de los restaurantes, cafeterías, heladerías, licorerías más reconocidos de diferentes ciudades de Ecuador.",
+            "link": "https://meniuz-tecnic.vercel.app/",
+            "tag": ["Gastronomia", "Turismo", "Web"],
+            "imgagen": "cap-meniuz.png"
+        },
+        {
+            "title": "Artistic - clon instagram",
+            "description": "Consumo de api rest Unsplash para realizar clon de instagran con usuario, publicaciones, estadisticas, perfiles, auth, etc.",
+            "link": "https://photography-lovat.vercel.app/",
+            "tag": ["Web", "Api Rest", "Fotografias"],
+            "imgagen": "cap-artistic.png"
+        },
+        {
+            "title": "EGP Solutions",
+            "description": "App movil para la consultar y descargar sus recibos de nómina en formato PDF y XML para empleados.",
+            "link": "https://play.google.com/store/apps/details?id=com.groupexcelencemovil3",
+            "tag": ["Software", "Movil", "Negocios"],
+            "imgagen": "cap-excellence.webp"
+        }
+    ]
+}

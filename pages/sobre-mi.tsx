@@ -1,10 +1,36 @@
 /* eslint-disable @next/next/no-img-element */
+import { NextSeo } from 'next-seo';
 import React from 'react';
 import { Layout } from '../components/layout';
 
 const PageSobreMi = () => {
     return (
         <Layout>
+            <NextSeo
+                title="Sobre mi | Andres coello goyes"
+                description="Entre las cosas que mas me gustan hacer es desarrollar apps de alto impacto, colaborar como tutor o creador de contenido."
+                canonical="http://localhost/"
+                openGraph={{
+                url: 'http://localhost/',
+                title: 'Sobre mi | Andres coello goyes',
+                description: 'Entre las cosas que mas me gustan hacer es desarrollar apps de alto impacto, colaborar como tutor o creador de contenido.',
+                images: [
+                    {
+                        url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
+                        width: 800,
+                        height: 600,
+                        alt: 'logo youtube andres coello'
+                    },
+                    {
+                        url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
+                        width: 900,
+                        height: 800,
+                        alt: 'logo youtube andres coello'
+                    },
+                ],
+                site_name: 'Andres coello goyes',
+                }}
+            />
             <section className='mt-28 mb-12 max-w-7xl mx-auto p-5'>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div className="w-full bg-white mb-6 rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">

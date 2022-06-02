@@ -1,13 +1,42 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Layout } from '../components/layout';
 import Link from 'next/link';
+import Portafolio from '../mock/portafolio.json';
 import { CardProyect } from '../components/card/cardProyect';
+import { Proyecto } from '../interfaces/proyecto';
+import { NextSeo } from 'next-seo';
 
 const PageHome = () => {
     return (
       <Layout className='leading-normal tracking-normal text-white gradient'>
+         <NextSeo
+            title="Andrés coello goyes"
+            description="Soy software developer desde el 2019 en ambiente web y móvil multiplataforma, autodidacta, tutor y amigo para quienes necesiten de una mano en sus proyectos."
+            canonical="http://localhost/"
+            openGraph={{
+            url: 'http://localhost/',
+            title: 'Andres coello goyes',
+            description: 'Soy software developer desde el 2019 en ambiente web y móvil multiplataforma, autodidacta, tutor y amigo para quienes necesiten de una mano en sus proyectos.',
+            images: [
+               {
+                  url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
+                  width: 800,
+                  height: 600,
+                  alt: 'Logo youtube - andres coello',
+               },
+               {
+                  url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
+                  width: 900,
+                  height: 800,
+                  alt: 'Logo youtube - andres coello',
+               },
+            ],
+            site_name: 'Andres coello goyes',
+            }}
+         />
          <div className="pt-24">
             <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
                <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
@@ -78,7 +107,15 @@ const PageHome = () => {
                <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Proyectos</h1>
 
                <div className="md:p-4 w-full p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                     {[1,2,3].map((proyect: number) => <CardProyect key={proyect} />)}
+                     {Portafolio.proyectos.slice(0, 3).map((proyect: Proyecto) => <CardProyect data={proyect} key={proyect.title} />)}
+               </div>
+
+               <div className='flex justify-center mt-5 w-full'>
+                  <Link href='/portafolio'>
+                     <a href='/portafolio'>
+                        <button className="border-2 border-app-100 text-app-100 px-4 py-2 rounded-md text-1xl font-medium transition duration-300">Más proyectos</button>
+                     </a>
+                  </Link>
                </div>
             </div>
          </section>

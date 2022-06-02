@@ -1,0 +1,55 @@
+{
+    "educacion": [
+        {
+            "title": "Platzi",
+            "description": "Platzi es una plataforma de educación Online, con tu suscripción tienes acceso a más de 1000 cursos en diferentes áreas de aprendizaje: Desarrollo e ingeniería, Diseño y UX, Negocios y emprendimiento, Crecimiento profesional.",
+            "link": "https://platzi.com/",
+            "tag": ["Ingeniería de software"],
+            "imgagen": "1622072579516.jpeg"
+        },
+        {
+            "title": "Tecnologico superior Babahoyo",
+            "description": "Formar profesionales tecnológicos competentes, con valores éticos y morales que contribuyen al desarrollo social, económico, político y cultural del país, mediante el fortalecimiento sistemático de la docencia, vinculación con la sociedad e investigación.",
+            "link": "https://istb.edu.ec/",
+            "tag": ["Software"],
+            "imgagen": "ISTB-02-3.png"
+        }
+    ],
+    "experiencia": [
+        {
+            "title": "GGTech Entertainment",
+            "description": "Entretenimiento y tecnológica con proyectos relacionados con el sector de los esports, los videojuegos y la educación.",
+            "link": "https://www.ggtech.es/",
+            "tag": ["Esports", "Web", "gaming"],
+            "imgagen": "1646814931307.jpeg"
+        },
+        {
+            "title": "Meniuz",
+            "description": "Aplicación móvil y web la cual recopila menús de los RESTAURANTES, CAFETERÍAS, HELADERÍAS, LICORERÍAS más reconocidos de diferentes ciudades de Ecuador.",
+            "link": "https://meniuz-tecnic.vercel.app/",
+            "tag": ["Gastronomia", "Turismo", "Web"],
+            "imgagen": "1644114050309.jpeg"
+        },
+        {
+            "title": "Ativar",
+            "description": "Desarrollo de sistemas desde el mantenimiento y renovación, hasta la creación de varios sistemas que permitan almacenar y procesar información.",
+            "link": "https://www.linkedin.com/company/ativar-desarrollo-de-software/about/",
+            "tag": ["Movile", "Soporte", "Web"],
+            "imgagen": "1633384626364.jpeg"
+        },
+        {
+            "title": "Cooproclem clementina",
+            "description": "(Practicas universitaria) Cargo de desarrollador movil multi plataforma, creando infraestructura de red y conección desde dispositivos moviles para el envio de datos a aplicaciones y servidores administrativos.",
+            "link": "#",
+            "tag": ["Software", "Movile", "Server", "Sql Db"],
+            "imgagen": "cooploclem.jpeg"
+        },
+        {
+            "title": "Good Better",
+            "description": "Crear productos y marcas útiles y deseables; desde dispositivos electrónicos hasta artículos cotidianos y plataformas digitales",
+            "link": "http://goodbetter.co/",
+            "tag": ["Web", "Analisis", "Seo"],
+            "imgagen": "1591821524338.jpeg"
+        }
+    ]
+}
