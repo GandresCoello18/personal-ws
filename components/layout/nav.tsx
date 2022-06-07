@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 export const Nav = () => {
 	const [pathname, setPathname] = useState<string>('');
+	const [openMenu, setOpenMenu] = useState<boolean>(false);
 
 	useEffect(() => {
 		setPathname(window.location.pathname);
@@ -22,7 +23,7 @@ export const Nav = () => {
 			</div>
 
 			<div className="block lg:hidden pr-4">
-				<button id="nav-toggle" className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
+				<button onClick={() => setOpenMenu(!openMenu)} id="nav-toggle" className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
 					<svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 						<title>Menu</title>
 						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -30,7 +31,7 @@ export const Nav = () => {
 				</button>
 			</div>
 
-			<div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+			<div className={`w-full flex-grow lg:flex lg:items-center lg:w-auto  lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20 ${openMenu ? 'block' : 'hidden'}`} id="nav-content">
 				<ul className="list-reset lg:flex justify-end flex-1 items-center">
 					<li className="mr-3">
 						<Link href='/portafolio'>
@@ -48,7 +49,7 @@ export const Nav = () => {
 						</Link>
 					</li>
 				</ul>
-				<a href='https://calendly.com/goyeselcoca/30min' target='_blank' rel="noreferrer">
+				<a href='https://calendly.com/goyeselcoca/30min' target='_blank' rel="noreferrer" className='hidden lg:block'>
 					<button id="navAction" className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">Platica conmigo</button>
 				</a>
 			</div>
