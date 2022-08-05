@@ -1,16 +1,18 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export const Footer = () => {
+    const [Avatar, setAvatar] = useState<string>('https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj');
+
     return (
 	<footer className="bg-white">
         <div className="container mx-auto  px-8">
             <div className="w-full flex flex-col md:flex-row py-6">
                 <div className="flex-1 mb-6 text-black">
                     <a target='_blank' className="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="https://www.youtube.com/channel/UCHWsGkCRqlNKnoxYkC_ZRxQ" rel="noreferrer">
-                        <img className='rounded-full' src='https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj' alt='logo andres coello goyes' />
+                        <img className='rounded-full' onError={() => setAvatar('./me.jpeg')} src={Avatar} alt='logo andres coello goyes' />
                     </a>
                 </div>
 

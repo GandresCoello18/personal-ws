@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export const Nav = () => {
+	const [Avatar, setAvatar] = useState<string>('https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj');
 	const [pathname, setPathname] = useState<string>('');
 	const [openMenu, setOpenMenu] = useState<boolean>(false);
 
@@ -17,7 +18,7 @@ export const Nav = () => {
 			<div className="pl-4 flex items-center">
 				<Link href='/'>
 					<a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
-						<img className='rounded-full w-14' src='https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj' alt='logo andres coello goyes' />
+						<img className='rounded-full w-14' onError={() => setAvatar('./me.jpeg')} src={Avatar} alt='logo andres coello goyes' />
 					</a>
 				</Link>
 			</div>
