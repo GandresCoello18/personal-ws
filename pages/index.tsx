@@ -15,9 +15,9 @@ const PageHome = () => {
          <NextSeo
             title="Andrés coello goyes"
             description="Soy software developer desde el 2019 en ambiente web y móvil multiplataforma, autodidacta, tutor y amigo para quienes necesiten de una mano en sus proyectos."
-            canonical="http://localhost/"
+            canonical="https://andres-coello-goyes.vercel.app/"
             openGraph={{
-            url: 'http://localhost/',
+            url: 'https://andres-coello-goyes.vercel.app/',
             title: 'Andres coello goyes',
             description: 'Soy software developer desde el 2019 en ambiente web y móvil multiplataforma, autodidacta, tutor y amigo para quienes necesiten de una mano en sus proyectos.',
             images: [
@@ -77,8 +77,10 @@ const PageHome = () => {
 
                <div className="flex flex-wrap">
                   <div className="w-5/6 sm:w-1/2 p-6">
-                     <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">Aplicaciones con React js</h3>
-                     <p className="text-gray-600 mb-8">Me gusta usar desarrollar apps Single page aplication, Server side rendering, Progres web app y móviles multiplataforma con React Native.<br /></p>
+                     <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">Full Stack Developer</h3>
+                     <p className="text-gray-600 mb-8">Me gusta desarrollar apps Single page aplication, Server side rendering, Progress web app y móviles multiplataforma con React y React Native.
+                     <br /><br />
+                     Los retos y proyectos personales son clave en mi camino como desarrollador de software.</p>
 
                   </div>
                   <div className="w-full sm:w-1/2 p-6">
@@ -94,7 +96,7 @@ const PageHome = () => {
                   <div className="w-full sm:w-1/2 p-6 mt-6">
                      <div className="align-middle">
                         <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">Dejando huellas</h3>
-                        <p className="text-gray-600 mb-8">He trabajado, colaborando en proyectos y ayudando a estudiantes en varias partes del mundo, además aprendo de ellos y de sus culturas.</p>
+                        <p className="text-gray-600 mb-8">He trabajado, colaborando en proyectos y ayudando a estudiantes en varias partes del mundo como: Colombia, Peru, Uruguay, Argentica Mexico y España, además aprendo de ellos y de sus culturas.</p>
                      </div>
                   </div>
 
