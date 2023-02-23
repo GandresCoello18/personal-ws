@@ -1,24 +1,45 @@
 {
     "proyectos": [
         {
+            "title": "React Card Shopping",
+            "description": "Dependencia para React js publicada para uso de tarjetas en ecomerce, animacion y acciones como agregar al carrito.",
+            "link": "https://www.npmjs.com/package/react-card-shopping",
+            "tag": ["software", "npm", "dependecy"],
+            "imgagen": "npm-card-shopping.png"
+        },
+        {
+            "title": "Live - ¿Cómo trabajar de Fullstack Developer en videojuegos?",
+            "description": "¿Te interesa el desarrollo, los videojuegos o ambos? Conoce a Andrés Coello, Fullstack developer en ggtech.com y estudiante de Platzi en una entrevista sobre su experiencia como estudiante y trabajando.",
+            "link": "https://platzi.com/eventos/como-trabajar-fullstack-videojuegos",
+            "tag": ["consejos-para-developers", "charla", "live"],
+            "imgagen": "andres-coello-live-platzi.png"
+        },
+        {
+            "title": "Carta Astral",
+            "description": "Ingresa los datos personales como ubicación, nacimiento y hora como resultado tendras un grafico y un reporte en pdf con la explicación",
+            "link": "https://res.cloudinary.com/cici/video/upload/v1676328203/util/2023-02-13_17-41-15_pszdhg.mp4",
+            "tag": ["next-js", "pdf", "charts"],
+            "imgagen": "carta-natal.png"
+        },
+        {
             "title": "Meniuz App",
             "description": "Aplicación móvil y web la cual recopila menús de los restaurantes, cafeterías, heladerías, licorerías más reconocidos de diferentes ciudades de Ecuador.",
             "link": "https://meniuz.com",
-            "tag": ["Gastronomia", "Turismo", "Web"],
+            "tag": ["gastronomia", "turismo", "web"],
             "imgagen": "cap-meniuz.png"
         },
         {
             "title": "Artistic - clon instagram",
             "description": "Consumo de api rest Unsplash para realizar clon de instagran con usuario, publicaciones, estadisticas, perfiles, auth, etc.",
             "link": "https://photography-lovat.vercel.app/",
-            "tag": ["Web", "Api Rest", "Fotografias"],
+            "tag": ["web", "api-rest", "fotografias"],
             "imgagen": "cap-artistic.png"
         },
         {
             "title": "EGP Solutions",
             "description": "App movil para la consultar y descargar sus recibos de nómina en formato PDF y XML para empleados.",
             "link": "https://play.google.com/store/apps/details?id=com.groupexcelencemovil3",
-            "tag": ["Software", "Movil", "Negocios"],
+            "tag": ["software", "movil", "negocios"],
             "imgagen": "cap-excellence.webp"
         }
     ]
