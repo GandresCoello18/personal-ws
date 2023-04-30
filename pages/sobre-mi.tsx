@@ -9,9 +9,9 @@ const PageSobreMi = () => {
             <NextSeo
                 title="Sobre mi | Andres coello goyes"
                 description="Entre las cosas que mas me gustan hacer es desarrollar apps de alto impacto, colaborar como tutor o creador de contenido."
-                canonical="http://localhost/"
+                canonical="https://andres-coello-goyes.vercel.app/"
                 openGraph={{
-                url: 'http://localhost/',
+                url: 'https://andres-coello-goyes.vercel.app/',
                 title: 'Sobre mi | Andres coello goyes',
                 description: 'Entre las cosas que mas me gustan hacer es desarrollar apps de alto impacto, colaborar como tutor o creador de contenido.',
                 images: [
@@ -55,7 +55,7 @@ const PageSobreMi = () => {
                         </div>
                     </a>
 
-                    <a href='https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj' target='_blank' className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row" rel="noreferrer">
+                    <a href='https://www.youtube.com/@andrescoellogoyes' target='_blank' className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row" rel="noreferrer">
                         <div className="w-full md:w-2/5 h-80">
                             <img className="object-center object-cover w-full h-full" src="/youtube.png" alt="youtube andres coello" />
                         </div>

@@ -48,7 +48,7 @@ const PageHome = () => {
                   </a>
                </div>
                <div className="w-full md:w-3/5 py-6 text-center">
-                  <img className="w-full md:w-56 z-50" src="/me2.png" alt='fotografia de andres coello goyes' />
+                  <img className="w-full md:w-56 z-50 rounded-xl" src="/me.jpeg" alt='fotografia de andres coello goyes' />
                </div>
             </div>
          </div>
