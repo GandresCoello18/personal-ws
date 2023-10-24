@@ -61,18 +61,18 @@ const PageSobreMi = () => {
                         </div>
                         <div className="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
                             <p className="text-xl text-gray-700 font-bold">Compartir es apreder 2 veces</p>
-                            <p className="text-base text-gray-400 font-normal">Creador de contenido en Software</p>
+                            <p className="text-base text-gray-400 font-normal">Creador de contenido en Desarrollo de Software</p>
                             <p className="text-base leading-relaxed text-gray-500 font-normal">Compartir y devolver el favor que internet me hizo a mí, en YouTube comparto tutoriales que a varios les sirve de gran ayuda.</p>
                         </div>
                     </a>
 
-                    <a href='https://www.tusclasesparticulares.com.ec/profesores/andres-coello-goyes.htm' target='_blank' className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row" rel="noreferrer">
+                    <a href='https://www.classgap.com/me/andres-coello-web-tech' target='_blank' className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row" rel="noreferrer">
                         <div className="w-full md:w-2/5 h-80">
                             <img className="object-center object-cover w-full h-full" src="/tus-clases.png" alt="clases particulares andres coello" />
                         </div>
                         <div className="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
-                            <p className="text-xl text-gray-700 font-bold">Alguien con quien platicar</p>
-                            <p className="text-base text-gray-400 font-normal">Tutor en Software</p>
+                            <p className="text-xl text-gray-700 font-bold">Alguien con quien platicar y aprender</p>
+                            <p className="text-base text-gray-400 font-normal">Profesor o tutor en Desarrollo de Software</p>
                             <p className="text-base leading-relaxed text-gray-500 font-normal">El camino del aprendizaje puede tener dificultades si no tienes compañía, es por eso que me ofrezco como tutor, profesor, pero más que eso un amigo en el que puedes confiar y platicar sobre tus proyectos.</p>
                         </div>
                     </a>

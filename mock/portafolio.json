@@ -1,6 +1,13 @@
 {
     "proyectos": [
         {
+            "title": "Botca",
+            "description": "Pagina de aterrizaje para ventas de ropa, filtra, busca y conoce los producto que ofrece Botca.",
+            "link": "https://botca.store",
+            "tag": ["Store", "Landing", "Ecomerce"],
+            "imgagen": "botca-store.png"
+        },
+        {
             "title": "React Card Shopping",
             "description": "Dependencia para React js publicada para uso de tarjetas en ecomerce, animacion y acciones como agregar al carrito.",
             "link": "https://www.npmjs.com/package/react-card-shopping",
