@@ -40,7 +40,7 @@ const PageSobreMi = () => {
                         <div className="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
                             <p className="text-xl text-gray-700 font-bold">Trabajando en mi</p>
                             <p className="text-base text-gray-400 font-normal">Software Engineer</p>
-                            <p className="text-base leading-relaxed text-gray-500 font-normal">En el 2018 tomé la decisión de adquirir conocimiento por mi cuenta, lo que muchos llaman ser autodidacta. Con la ayuda videos, plataformas, post, tutoriales, retos y colaboraciones.</p>
+                            <p className="text-base leading-relaxed text-gray-500 font-normal">En el 2017 tomé la decisión de adquirir conocimiento por mi cuenta, lo que muchos llaman ser autodidacta. Con la ayuda videos, plataformas, post, tutoriales, retos y colaboraciones.</p>
                         </div>
                     </div>
 

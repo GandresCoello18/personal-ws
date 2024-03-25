@@ -1,7 +1,14 @@
 {
     "proyectos": [
         {
-            "title": "Botca",
+            "title": "Google Place Business",
+            "description": "App para busqueda de negocios o establecimiento cerca de tu ubicación, con la ayuda de google maps y place",
+            "link": "https://google-place-business.vercel.app/",
+            "tag": ["Maps", "Google", "Business"],
+            "imgagen": "google-place-business.png"
+        },
+        {
+            "title": "Botca Store",
             "description": "Pagina de aterrizaje para ventas de ropa, filtra, busca y conoce los producto que ofrece Botca.",
             "link": "https://botca.store",
             "tag": ["Store", "Landing", "Ecomerce"],
