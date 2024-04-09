@@ -11,9 +11,9 @@ const PageResumen = () => {
             <NextSeo
                 title="Resumen | Andres coello goyes"
                 description="Instituciones o plataforma de educación, experiencias, empresas, trabajo."
-                canonical="http://localhost/"
+                canonical="https://andres-coello-goyes.vercel.app/"
                 openGraph={{
-                url: 'http://localhost/',
+                url: 'https://andres-coello-goyes.vercel.app/',
                 title: 'Resumen | Andres coello goyes',
                 description: 'Instituciones o plataforma de educación, experiencias, empresas, trabajo.',
                 images: [

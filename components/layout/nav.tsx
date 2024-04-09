@@ -35,18 +35,28 @@ export const Nav = () => {
 			<div className={`w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 ${openMenu ? 'block' : 'hidden'}`} id="nav-content">
 				<ul className="list-reset lg:flex justify-end flex-1 items-center">
 					<li className="mr-3">
+						<Link href='/'>
+							<a className={`inline-block py-2 px-4 text-white ${pathname === '/inicio' ? 'font-bold' : ''} no-underline`} href="/">Inicio</a>
+						</Link>
+					</li>
+					<li className="mr-3">
 						<Link href='/portafolio'>
 							<a className={`inline-block py-2 px-4 text-white ${pathname === '/portafolio' ? 'font-bold' : ''} no-underline`} href="/portafolio">Portafolio</a>
 						</Link>
 					</li>
 					<li className="mr-3">
+						<Link href='/videos'>
+							<a className={`inline-block py-2 px-4 text-white ${pathname === '/videos' ? 'font-bold' : ''} no-underline`} href="/videos">Videos</a>
+						</Link>
+					</li>
+					<li className="mr-3">
 						<Link href='/resumen'>
-							<a className={`inline-block text-white no-underline ${pathname === '/resumen' ? 'font-bold' : ''} hover:text-gray-800 hover:text-underline py-2 px-4`} href="/resumen">Resumen</a>
+							<a className={`inline-block text-white no-underline ${pathname === '/resumen' ? 'font-bold' : ''} py-2 px-4`} href="/resumen">Resumen</a>
 						</Link>
 					</li>
 					<li className="mr-3">
 						<Link href='/sobre-mi'>
-							<a className={`inline-block text-white no-underline ${pathname === '/sobre-mi' ? 'font-bold' : ''} hover:text-gray-800 hover:text-underline py-2 px-4`} href="/sobre-mi">Sobre mi</a>
+							<a className={`inline-block text-white no-underline ${pathname === '/sobre-mi' ? 'font-bold' : ''} py-2 px-4`} href="/sobre-mi">Sobre mi</a>
 						</Link>
 					</li>
 				</ul>

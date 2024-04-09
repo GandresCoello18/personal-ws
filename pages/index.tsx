@@ -4,7 +4,8 @@
 import React from 'react';
 import { Layout } from '../components/layout';
 import Link from 'next/link';
-import Portafolio from '../mock/portafolio.json';
+import PortfolioJson from '../mock/portafolio.json';
+import VideosJson from '../mock/videos.json';
 import { CardProyect } from '../components/card/cardProyect';
 import { Proyecto } from '../interfaces/proyecto';
 import { NextSeo } from 'next-seo';
@@ -111,13 +112,31 @@ const PageHome = () => {
                <h1 className="text-3xl font-semibold text-center ml-3 mb-8 text-gray-800">Proyectos Destacados</h1>
 
                <div className="md:p-4 w-full p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                     {Portafolio.proyectos.slice(0, 3).map((proyect: Proyecto) => <CardProyect isAnimate={true} data={proyect} key={proyect.title} />)}
+                     {PortfolioJson.proyectos.slice(0, 3).map((proyect: Proyecto) => <CardProyect isAnimate={true} data={proyect} key={proyect.title} />)}
                </div>
 
                <div className='flex justify-center mt-5 w-full'>
                   <Link href='/portafolio'>
                      <a href='/portafolio'>
                         <button className="border-2 border-app-100 text-app-100 px-4 py-2 rounded-md text-1xl font-medium transition duration-300">Más proyectos</button>
+                     </a>
+                  </Link>
+               </div>
+            </div>
+         </section>
+
+         <section className="bg-gray-100 py-16">
+            <div className="container mx-auto flex flex-wrap pt-4 pb-12">
+               <h1 className="text-3xl font-semibold text-center ml-3 mb-8 text-gray-800">Videos Destacados</h1>
+
+               <div className="md:p-4 w-full p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                  {VideosJson.videos.slice(0, 3).map(video => <iframe key={video.link} className="w-full h-64 my-10 rounded-lg md:h-80" src={video.link} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}></iframe>)}
+               </div>
+
+               <div className='flex justify-center mt-5 w-full'>
+                  <Link href='/videos'>
+                     <a href='/videos'>
+                        <button className="border-2 border-app-100 text-app-100 px-4 py-2 rounded-md text-1xl font-medium transition duration-300">Más videos</button>
                      </a>
                   </Link>
                </div>

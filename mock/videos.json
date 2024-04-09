@@ -1,0 +1,40 @@
+{
+    "videos": [
+        {
+            "link": "https://youtube.com/embed/zauRU6H7tIk",
+            "title": "DevLokos S1 Ep001 || Trabaja para empresas de Europa desde casa || Andrés Coello"
+        },
+        {
+            "link": "https://youtube.com/embed/FUjrS9GSAyY",
+            "title": "Inicio de sesión con Google | React Native #12"
+        },
+        {
+            "link": "https://youtube.com/embed/Xi_q6zFS1Yg",
+            "title": "Introduccion a React js #1, creando una SPA"
+        },
+        {
+            "link": "https://youtube.com/embed/LMLmMEx6Bxg",
+            "title": "Agregar icono y nombre a nuestra app | React Native #14"
+        },
+        {
+            "link": "https://youtube.com/embed/8poLsEKwEN8",
+            "title": "Funciones en Raptor"
+        },
+        {
+            "link": "https://youtube.com/embed/jAPhsy45SrI",
+            "title": "Instalar tailwind en Next js | #2"
+        },
+        {
+            "link": "https://youtube.com/embed/uy55lfsoLd8",
+            "title": "Metodo Post con Postman | Express js #7"
+        },
+        {
+            "link": "https://youtube.com/embed/iUR53qaIZGc",
+            "title": "Obtener comentarios de post - Redux y React Router #11"
+        },
+        {
+            "link": "https://youtube.com/embed/Nm_Q-Y4I8CQ",
+            "title": "Restricciones cascade de claves foraneas al eliminar | MySql #4"
+        }
+    ]
+}
