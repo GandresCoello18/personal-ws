@@ -1,10 +1,11 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from 'react';
+"use client"
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { BASE_URL } from 'app/utils/url';
 
 export const Nav = () => {
-	const [Avatar, setAvatar] = useState<string>('https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj');
+	const [Avatar, setAvatar] = useState<string>(`${BASE_URL}/me.jpeg`);
 	const [pathname, setPathname] = useState<string>('');
 	const [openMenu, setOpenMenu] = useState<boolean>(false);
 
@@ -17,9 +18,9 @@ export const Nav = () => {
 		<div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
 			<div className="pl-4 flex items-center">
 				<Link href='/'>
-					<a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
+					<div className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
 						<img className='rounded-full w-14' onError={() => setAvatar('./me.jpeg')} src={Avatar} alt='logo andres coello goyes' />
-					</a>
+					</div>
 				</Link>
 			</div>
 
@@ -36,31 +37,31 @@ export const Nav = () => {
 				<ul className="list-reset lg:flex justify-end flex-1 items-center">
 					<li className="mr-3">
 						<Link href='/'>
-							<a className={`inline-block py-2 px-4 text-white ${pathname === '/inicio' ? 'font-bold' : ''} no-underline`} href="/">Inicio</a>
+							<span className={`inline-block py-2 px-4 text-white ${pathname === '/inicio' ? 'font-bold' : ''} no-underline`}>Inicio</span>
 						</Link>
 					</li>
 					<li className="mr-3">
 						<Link href='/portafolio'>
-							<a className={`inline-block py-2 px-4 text-white ${pathname === '/portafolio' ? 'font-bold' : ''} no-underline`} href="/portafolio">Portafolio</a>
+							<span className={`inline-block py-2 px-4 text-white ${pathname === '/portafolio' ? 'font-bold' : ''} no-underline`}>Portafolio</span>
 						</Link>
 					</li>
 					<li className="mr-3">
 						<Link href='/videos'>
-							<a className={`inline-block py-2 px-4 text-white ${pathname === '/videos' ? 'font-bold' : ''} no-underline`} href="/videos">Videos</a>
+							<span className={`inline-block py-2 px-4 text-white ${pathname === '/videos' ? 'font-bold' : ''} no-underline`}>Videos</span>
 						</Link>
 					</li>
 					<li className="mr-3">
 						<Link href='/resumen'>
-							<a className={`inline-block text-white no-underline ${pathname === '/resumen' ? 'font-bold' : ''} py-2 px-4`} href="/resumen">Resumen</a>
+							<span className={`inline-block text-white no-underline ${pathname === '/resumen' ? 'font-bold' : ''} py-2 px-4`}>Resumen</span>
 						</Link>
 					</li>
 					<li className="mr-3">
 						<Link href='/sobre-mi'>
-							<a className={`inline-block text-white no-underline ${pathname === '/sobre-mi' ? 'font-bold' : ''} py-2 px-4`} href="/sobre-mi">Sobre mi</a>
+							<span className={`inline-block text-white no-underline ${pathname === '/sobre-mi' ? 'font-bold' : ''} py-2 px-4`}>Sobre mi</span>
 						</Link>
 					</li>
 				</ul>
-				<a href='https://calendly.com/goyeselcoca/30min' target='_blank' rel="noreferrer" className='hidden lg:block'>
+				<a href='https://calendly.com/goyeselcoca/30min' target='_blank' rel="noreferrer" className='cursor-pointer hidden lg:block'>
 					<button id="navAction" className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">Platica conmigo</button>
 				</a>
 			</div>

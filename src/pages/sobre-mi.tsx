@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { NextSeo } from 'next-seo';
-import React from 'react';
-import { Layout } from '../components/layout';
+import { Layout } from '../app/layout';
+import { BASE_URL } from 'app/utils/url';
 
 const PageSobreMi = () => {
     return (
@@ -16,16 +16,8 @@ const PageSobreMi = () => {
                 description: 'Entre las cosas que mas me gustan hacer es desarrollar apps de alto impacto, colaborar como tutor o creador de contenido.',
                 images: [
                     {
-                        url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
-                        width: 800,
-                        height: 600,
-                        alt: 'logo youtube andres coello'
-                    },
-                    {
-                        url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
-                        width: 900,
-                        height: 800,
-                        alt: 'logo youtube andres coello'
+                        url: `${BASE_URL}/me.jpg`,
+                        alt: 'Andres Coello Goyes',
                     },
                 ],
                 site_name: 'Andres coello goyes',
@@ -35,7 +27,7 @@ const PageSobreMi = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div className="w-full bg-white mb-6 rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
                         <div className="w-full md:w-2/5 h-80">
-                            <img className="object-center object-cover w-full h-full" src="/me.jpeg" alt="Andres coello" />
+                            <img className="object-top object-cover w-full h-full" src="/me.jpeg" alt="Andres coello" />
                         </div>
                         <div className="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
                             <p className="text-xl text-gray-700 font-bold">Trabajando en mi</p>
@@ -46,7 +38,7 @@ const PageSobreMi = () => {
 
                     <a href='https://platzi.com/p/programandres/' target='_blank' rel="noreferrer" className="w-full bg-white mb-6 rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
                         <div className="w-full md:w-2/5 h-80">
-                            <img className="object-center object-cover w-full h-full" src="/platzi.png" alt="platzi andres coello" />
+                            <img className="object-top object-cover w-full h-full" src="/platzi.png" alt="platzi andres coello" />
                         </div>
                         <div className="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
                             <p className="text-xl text-gray-700 font-bold">Nunca parar de aprender</p>
@@ -68,7 +60,7 @@ const PageSobreMi = () => {
 
                     <a href='https://www.classgap.com/me/andres-coello-web-tech' target='_blank' className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row" rel="noreferrer">
                         <div className="w-full md:w-2/5 h-80">
-                            <img className="object-center object-cover w-full h-full" src="/tus-clases.png" alt="clases particulares andres coello" />
+                            <img className="object-cover object-left w-full h-full" src="/tus-clases.png" alt="clases particulares andres coello" />
                         </div>
                         <div className="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
                             <p className="text-xl text-gray-700 font-bold">Alguien con quien platicar y aprender</p>

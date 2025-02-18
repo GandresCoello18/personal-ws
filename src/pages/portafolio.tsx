@@ -1,33 +1,25 @@
-import React from 'react';
 import { NextSeo } from 'next-seo';
 import { CardProyect } from '../components/card/cardProyect';
 import Portafolio from '../mock/portafolio.json';
-import { Layout } from '../components/layout'
-import { Proyecto } from '../interfaces/proyecto';
+import { Layout } from '../app/layout'
+import { Proyecto } from '../interfaces/proyect';
+import { BASE_URL } from 'app/utils/url';
 
 const PagePortafolio = () => {
     return (
         <Layout>
             <NextSeo
-                title="Portafolio | Andres coello goyes"
+                title="Portafolio | Andres Coello Goyes"
                 description="Mis proyectos mas recientes y publicados en el desarrollo web y movil."
                 canonical="https://andres-coello-goyes.vercel.app/"
                 openGraph={{
                 url: 'https://andres-coello-goyes.vercel.app/',
-                title: 'Portafolio | Andres coello goyes',
+                title: 'Portafolio | Andres Coello Goyes',
                 description: 'Mis proyectos mas recientes y publicados en el desarrollo web y movil.',
                 images: [
                     {
-                        url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
-                        width: 800,
-                        height: 600,
-                        alt: 'logo youtube andres coello'
-                    },
-                    {
-                        url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
-                        width: 900,
-                        height: 800,
-                        alt: 'logo youtube andres coello'
+                        url: `${BASE_URL}/me.jpg`,
+                        alt: 'Andres Coello Goyes',
                     },
                 ],
                 site_name: 'Andres coello goyes',

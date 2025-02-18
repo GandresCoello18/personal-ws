@@ -1,10 +1,11 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react';
+"use client"
+import { useState } from 'react';
 import Link from 'next/link';
+import { BASE_URL } from 'app/utils/url';
 
 export const Footer = () => {
-    const [Avatar, setAvatar] = useState<string>('https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj');
+    const [Avatar, setAvatar] = useState<string>(`${BASE_URL}/me.jpeg`);
 
     return (
         <footer className="bg-gray-900 text-gray-300">
@@ -16,7 +17,7 @@ export const Footer = () => {
               </a>
               <div className='ml-3'>
                 <p className="font-semibold text-xl md:text-2xl">Andrés Coello</p>
-                <p className="text-sm md:text-base">Software Developer</p>
+                <p className="text-sm md:text-base">Full Stack Developer</p>
               </div>
             </div>
       
@@ -24,7 +25,7 @@ export const Footer = () => {
               <p className="font-semibold text-xl md:text-2xl mb-4">Conecta</p>
               <ul className="space-y-2">
                 <li><a href="https://calendly.com/goyeselcoca/30min" target='_blank' rel="noreferrer">Platica conmigo</a></li>
-                <li><a href="https://www.tusclasesparticulares.com.ec/profesores/andres-coello-goyes.htm" target='_blank' rel="noreferrer">Asesorías</a></li>
+                <li><a href="https://www.classgap.com/es/tutor/andres-coello-web-tech" target='_blank' rel="noreferrer">Asesorías</a></li>
                 <li><a href="https://platzi.com/p/programandres/" target='_blank' rel="noreferrer">Platzi</a></li>
               </ul>
             </div>
@@ -33,7 +34,7 @@ export const Footer = () => {
               <p className="font-semibold text-xl md:text-2xl mb-4">Redes</p>
               <ul className="space-y-2">
                 <li><a href="https://www.instagram.com/coellogoyes" target='_blank' rel="noreferrer">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/andr%C3%A9s-roberto-coello-goyes" target='_blank' rel="noreferrer">Linkedin</a></li>
+                <li><a href="https://www.linkedin.com/in/andr%C3%A9s-roberto-coello-goyes" target='_blank' rel="noreferrer">LinkedIn</a></li>
                 <li><a href="https://twitter.com/AndresC79085858" target='_blank' rel="noreferrer">Twitter</a></li>
               </ul>
             </div>
@@ -41,9 +42,9 @@ export const Footer = () => {
             <div className="flex flex-col">
               <p className="font-semibold text-xl md:text-2xl mb-4">Web</p>
               <ul className="space-y-2">
-                <li><Link href='/portafolio'><a>Portafolio</a></Link></li>
-                <li><Link href='/resumen'><a>Resumen</a></Link></li>
-                <li><Link href='/sobre-mi'><a>Sobre mí</a></Link></li>
+                <li><Link href='/portafolio'>Portafolio</Link></li>
+                <li><Link href='/resumen'>Resumen</Link></li>
+                <li><Link href='/sobre-mi'>Sobre mí</Link></li>
               </ul>
             </div>
           </div>

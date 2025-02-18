@@ -19,6 +19,4 @@ a {
   background: linear-gradient(90deg, #718096  0%, #2d3748 100%);
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";

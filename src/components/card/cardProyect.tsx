@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
-import { Proyecto } from '../../interfaces/proyecto';
+import { Proyecto } from '../../interfaces/proyect';
 
 type Props = {
     data: Proyecto;

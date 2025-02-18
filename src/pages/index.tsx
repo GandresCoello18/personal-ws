@@ -1,52 +1,44 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import { Layout } from '../components/layout';
+import { Layout } from '../app/layout';
 import Link from 'next/link';
 import PortfolioJson from '../mock/portafolio.json';
 import VideosJson from '../mock/videos.json';
 import { CardProyect } from '../components/card/cardProyect';
-import { Proyecto } from '../interfaces/proyecto';
-import { NextSeo } from 'next-seo';
+import { Proyecto } from '../interfaces/proyect';
+import { useEffect, useState } from 'react';
 
-const PageHome = () => {
+const images = [
+   '/conf-quito-cumbaya.jpg',
+   '/conf-quito-cumbaya-2.jpeg',
+ ];
+
+const PageHome = () => {    
+    const [currentImage, setCurrentImage] = useState(images[0]);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentImage((prevImage) => {
+          const currentIndex = images.indexOf(prevImage);
+          const nextIndex = (currentIndex + 1) % images.length;
+          return images[nextIndex];
+        });
+      }, 10000);
+  
+      return () => clearInterval(interval);
+    }, []);
+   
     return (
       <Layout className='leading-normal tracking-normal text-white gradient'>
-         <NextSeo
-            title="Andrés coello goyes"
-            description="Soy software developer desde el 2019 en ambiente web y móvil multiplataforma, autodidacta, tutor y amigo para quienes necesiten de una mano en sus proyectos."
-            canonical="https://andres-coello-goyes.vercel.app/"
-            openGraph={{
-            url: 'https://andres-coello-goyes.vercel.app/',
-            title: 'Andres coello goyes',
-            description: 'Soy software developer desde el 2019 en ambiente web y móvil multiplataforma, autodidacta, tutor y amigo para quienes necesiten de una mano en sus proyectos.',
-            images: [
-               {
-                  url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
-                  width: 800,
-                  height: 600,
-                  alt: 'Logo youtube - andres coello',
-               },
-               {
-                  url: 'https://yt3.ggpht.com/lRRy0GQ0LR49qNODT8Th5OLC-FgqD05VShVPjtZtjc_zlCFR5QoXVUIr3JBHZSq-5_UqCUKkDQ=s88-c-k-c0x00ffffff-no-rj',
-                  width: 900,
-                  height: 800,
-                  alt: 'Logo youtube - andres coello',
-               },
-            ],
-            site_name: 'Andres coello goyes',
-            }}
-         />
-
-         <div className="header bg-cover bg-center" style={{ backgroundImage: 'url(/conf-quito-cumbaya.jpg)' }}>
+         <div className="header bg-cover bg-center" style={{ backgroundImage: `url(${currentImage})` }}>
             <div className='bg-black/50'>
                <div className="pt-24">
                   <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
                      <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
                         <p className="uppercase tracking-loose w-full">¿Me estabas buscando?</p>
                         <h1 className="my-4 text-5xl font-bold leading-tight">¡Hola, me llamo Andrés Coello!</h1>
-                        <p className="leading-normal text-2xl mb-8">Soy software developer en web y móvil, te presento una breve biografía de mí y te invito a platicar conmigo.</p>
+                        <p className="leading-normal text-2xl mb-8">Soy Full Stack developer en web y móvil multiplataforma, pero estoy en camino a ser <strong>Devops Engineer</strong> te presento una breve biografía de mí y te invito a platicar conmigo.</p>
                         <a href='https://calendly.com/goyeselcoca/30min' className='z-10' target='_blank' rel="noreferrer">
                            <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Platica conmigo</button>
                         </a>
@@ -81,10 +73,9 @@ const PageHome = () => {
                <div className="flex flex-wrap">
                   <div className="w-5/6 sm:w-1/2 p-6">
                      <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">Full Stack Developer</h3>
-                     <p className="text-gray-600 mb-8">Me gusta desarrollar apps Api Rest, Graphql, Single page aplication, Server side rendering, Progress web app y móviles multiplataforma con React y React Native.
+                     <p className="text-gray-600 mb-8">Me gusta desarrollar aplicaciones que usan Api Rest, Graphql, Single page aplication, Server side rendering, Progress web app y móviles multiplataforma con React, React Native, Next.js, Nest.js, Node.js, Redis, MongoDB, MySql, Express, etc.
                      <br /><br />
-                     Las conferencias, retos, mentor en linea para quienes empiezan en el desarrollo de software y mis proyectos personales son clave en mi camino como desarrollador de software.</p>
-
+                     También doy charlas, me uno a retos, soy mentor o tutor en linea para quienes empiezan en el desarrollo de software y mis proyectos personales son clave en mi camino de aprendizaje.</p>
                   </div>
                   <div className="w-full sm:w-1/2 p-6">
                      <img src='/dev.png' alt='imagen dev' className='w-full' />
@@ -99,7 +90,7 @@ const PageHome = () => {
                   <div className="w-full sm:w-1/2 p-6 mt-6">
                      <div className="align-middle">
                         <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">Dejando huellas</h3>
-                        <p className="text-gray-600 mb-8">He trabajado, colaborando en mis proyectos personales como tambien ayudando a estudiantes en varias partes del mundo como: Colombia, Peru, Uruguay, Argentina, Mexico, Republica Domenicana y España, además aprendo de ellos y de sus culturas.</p>
+                        <p className="text-gray-600 mb-8">He trabajado colaborando en proyectos abiertos como personales pero mas frecuentemente ayudando a estudiantes en varias partes del mundo como: Colombia, Peru, Uruguay, Argentina, Mexico, Republica Dominicana y España, además aprendo de ellos y de sus culturas.</p>
                      </div>
                   </div>
 
@@ -117,17 +108,15 @@ const PageHome = () => {
 
                <div className='flex justify-center mt-5 w-full'>
                   <Link href='/portafolio'>
-                     <a href='/portafolio'>
-                        <button className="border-2 border-app-100 text-app-100 px-4 py-2 rounded-md text-1xl font-medium transition duration-300">Más proyectos</button>
-                     </a>
+                     <button className="border-2 border-gray-900 cursor-pointer text-gray-900 px-4 py-2 rounded-md text-1xl font-medium transition duration-300">Más proyectos</button>
                   </Link>
                </div>
             </div>
          </section>
 
-         <section className="bg-gray-100 py-16">
+         <section className="bg-gray-100 py-10">
             <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-               <h1 className="text-3xl font-semibold text-center ml-3 mb-8 text-gray-800">Videos Destacados</h1>
+               <h1 className="text-3xl font-semibold text-center ml-3 text-gray-800">Videos Destacados</h1>
 
                <div className="md:p-4 w-full p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                   {VideosJson.videos.slice(0, 3).map(video => <iframe key={video.link} className="w-full h-64 my-10 rounded-lg md:h-80" src={video.link} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}></iframe>)}
@@ -135,9 +124,7 @@ const PageHome = () => {
 
                <div className='flex justify-center mt-5 w-full'>
                   <Link href='/videos'>
-                     <a href='/videos'>
-                        <button className="border-2 border-app-100 text-app-100 px-4 py-2 rounded-md text-1xl font-medium transition duration-300">Más videos</button>
-                     </a>
+                     <button className="border-2 border-gray-900 cursor-pointer text-gray-900 px-4 py-2 rounded-md text-1xl font-medium transition duration-300">Más videos</button>
                   </Link>
                </div>
             </div>
@@ -168,13 +155,11 @@ const PageHome = () => {
 
             <h3 className="my-4 text-3xl leading-tight">¡Te invito a un espacio de 30 minutos!</h3>
 
-            <Link href='https://calendly.com/goyeselcoca/30min'>
-               <a href='https://calendly.com/goyeselcoca/30min' target='_blank' rel="noreferrer">
-                  <button className='mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg'>
-                     Platica conmigo
-                  </button>
-               </a>
-            </Link>
+            <a href='https://calendly.com/goyeselcoca/30min' target='_blank' rel="noreferrer">
+               <button className='mx-auto lg:mx-0 hover:underline cursor-pointer bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg'>
+                  Platica conmigo
+               </button>
+            </a>
          </section>
       </Layout>
     )

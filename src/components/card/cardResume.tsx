@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import { Resumen } from '../../interfaces/resumen';
+import { Resumen } from '../../interfaces/resume';
 
 type Props = {
     data: Resumen;

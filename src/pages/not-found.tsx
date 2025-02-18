@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
 import Link from 'next/link';
 
 const pageNotFound = () => {
@@ -12,9 +11,7 @@ const pageNotFound = () => {
             <p className="text-2xl md:text-3xl font-light leading-normal">Lo sentimos, no encontramos la pagina. </p>
             <p className="mb-8">Es posible que esta pagina ya no existe le recomendamos regresar a la pagina principal.</p>
             <Link href='/'>
-              <a href='/'>
-                <button className="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-600 active:bg-blue-600 hover:bg-blue-700">Regresar al inicio</button>
-              </a>
+              <button className="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-600 active:bg-blue-600 hover:bg-blue-700">Regresar al inicio</button>
             </Link>
           </div>
           <div className="max-w-lg">

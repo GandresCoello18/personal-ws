@@ -1,3 +1,3 @@
-import { Resumen } from "./resumen";
+import { Resumen } from "./resume";
 
 export interface Proyecto extends Resumen {}
