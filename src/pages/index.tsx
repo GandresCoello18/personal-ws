@@ -5,6 +5,7 @@ import { Layout } from '../app/layout';
 import Link from 'next/link';
 import PortfolioJson from '../mock/portafolio.json';
 import VideosJson from '../mock/videos.json';
+import { FaAws, FaReact, FaNodeJs, FaLinux, FaPhoenixFramework, FaYarn, FaChrome, FaDocker, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { CardProyect } from '../components/card/cardProyect';
 import { Proyecto } from '../interfaces/proyect';
 import { useEffect, useState } from 'react';
@@ -12,7 +13,19 @@ import { useEffect, useState } from 'react';
 const images = [
    '/conf-quito-cumbaya.jpg',
    '/conf-quito-cumbaya-2.jpeg',
- ];
+];
+
+const techs = [
+   { icon: <FaReact size={50} />, name: 'React' },
+   { icon: <FaNodeJs size={50} />, name: 'Node.js' },
+   { icon: <FaDocker size={50} />, name: 'Docker' },
+   { icon: <FaAws size={50} />, name: 'AWS' },
+   { icon: <FaLinux size={50} />, name: 'Linux' },
+   { icon: <FaYarn size={50} />, name: 'Yarn' },
+   { icon: <FaChrome size={50} />, name: 'Chrome' },
+   { icon: <FaHtml5 size={50} />, name: 'HTML5' },
+   { icon: <FaCss3Alt size={50} />, name: 'CSS3' }
+];
 
 const PageHome = () => {    
     const [currentImage, setCurrentImage] = useState(images[0]);
@@ -73,34 +86,47 @@ const PageHome = () => {
                <div className="flex flex-wrap">
                   <div className="w-5/6 sm:w-1/2 p-6">
                      <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">Full Stack Developer</h3>
-                     <p className="text-gray-600 mb-8">Me gusta desarrollar aplicaciones que usan Api Rest, Graphql, Single page aplication, Server side rendering, Progress web app y móviles multiplataforma con React, React Native, Next.js, Nest.js, Node.js, Redis, MongoDB, MySql, Express, etc.
+                     <p className="text-gray-600 md:mb-8">Me gusta desarrollar aplicaciones que usan Api Rest, Graphql, Single page aplication, Server side rendering, Progress web app y móviles multiplataforma con React, React Native, Next.js, Nest.js, Node.js, Redis, MongoDB, MySql, Express, etc.
                      <br /><br />
                      También doy charlas, me uno a retos, soy mentor o tutor en linea para quienes empiezan en el desarrollo de software y mis proyectos personales son clave en mi camino de aprendizaje.</p>
                   </div>
-                  <div className="w-full sm:w-1/2 p-6">
+                  <div className="w-full sm:w-1/2 md:p-6">
                      <img src='/dev.png' alt='imagen dev' className='w-full' />
                   </div>
                </div>
 
 
                <div className="flex flex-wrap flex-col-reverse sm:flex-row">
-                  <div className="w-full sm:w-1/2 p-6 mt-6">
+                  <div className="w-full sm:w-1/2 md:p-6 md:mt-6">
                      <img src='/planet.png' alt='img planet' className='w-full' />
                   </div>
                   <div className="w-full sm:w-1/2 p-6 mt-6">
                      <div className="align-middle">
                         <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">Dejando huellas</h3>
-                        <p className="text-gray-600 mb-8">He trabajado colaborando en proyectos abiertos como personales pero mas frecuentemente ayudando a estudiantes en varias partes del mundo como: Colombia, Peru, Uruguay, Argentina, Mexico, Republica Dominicana y España, además aprendo de ellos y de sus culturas.</p>
+                        <p className="text-gray-600 md:mb-8">He trabajado colaborando en proyectos abiertos como personales pero mas frecuentemente ayudando a estudiantes en varias partes del mundo como: Colombia, Peru, Uruguay, Argentina, Mexico, Republica Dominicana y España, además aprendo de ellos y de sus culturas.</p>
                      </div>
                   </div>
 
                </div>
             </div>
+
+            <div className="mx-auto px-4 text-center">
+               <h2 className="mb-4 text-3xl text-gray-800 font-bold">Me Encanta</h2>
+               <p className="text-gray-600 mb-8">Estas son algunas de las tecnologías con las que me apasiona trabajar.</p>
+               <div className="flex flex-wrap justify-center gap-6">
+                  {techs.map((tech, index) => (
+                     <div key={index} className="bg-white text-gray-400 p-6 rounded-lg shadow-lg flex items-center justify-center flex-col">
+                     {tech.icon}
+                     <span className="mt-4 text-lg font-medium text-gray-400">{tech.name}</span>
+                     </div>
+                  ))}
+               </div>
+               </div>
          </section>
 
          <section className="bg-gray-100 py-16">
             <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-               <h1 className="text-3xl font-semibold text-center ml-3 mb-8 text-gray-800">Proyectos Destacados</h1>
+               <h1 className="text-3xl font-semibold text-center md:text-left ml-3 mb-8 text-gray-800 w-full">Proyectos Destacados</h1>
 
                <div className="md:p-4 w-full p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                      {PortfolioJson.proyectos.slice(0, 3).map((proyect: Proyecto) => <CardProyect isAnimate={true} data={proyect} key={proyect.title} />)}
@@ -116,7 +142,7 @@ const PageHome = () => {
 
          <section className="bg-gray-100 py-10">
             <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-               <h1 className="text-3xl font-semibold text-center ml-3 text-gray-800">Videos Destacados</h1>
+               <h1 className="text-3xl font-semibold text-center md:text-left ml-3 text-gray-800 w-full">Videos Destacados</h1>
 
                <div className="md:p-4 w-full p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                   {VideosJson.videos.slice(0, 3).map(video => <iframe key={video.link} className="w-full h-64 my-10 rounded-lg md:h-80" src={video.link} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}></iframe>)}

@@ -27,7 +27,8 @@ const PagePortafolio = () => {
             />
 
             <section className='mt-28 mb-12'>
-                <h1 className='text-center p-5 mb-10 text-4xl'>Portafolio</h1>
+                <h1 className='text-center p-5 mb-2 text-4xl'>Portafolio</h1>
+                <p className="text-center mt-2 mb-6">Un vistazo a mis trabajos recientes y colaboraciones</p>
                 <div className="md:p-4 p-2 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {Portafolio.proyectos.map((proyect: Proyecto) => <CardProyect key={proyect.title} data={proyect} />)}
                 </div>
