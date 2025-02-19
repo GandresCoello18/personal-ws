@@ -63,7 +63,7 @@ const PageHome = () => {
         <div className="bg-black/50">
           <div className="pt-24">
             <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-              <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+              <div className="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left">
                 <p className="uppercase tracking-loose w-full">
                   ¿Me estabas buscando?
                 </p>
@@ -104,7 +104,7 @@ const PageHome = () => {
             </div>
           </div>
 
-          <div className="relative -mt-12 lg:-mt-24">
+          <div className="relative -mt-10 lg:-mt-24">
             <svg
               viewBox="0 0 1428 174"
               version="1.1"

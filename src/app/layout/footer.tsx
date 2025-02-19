@@ -11,21 +11,21 @@ export const Footer = () => {
     <footer className="bg-gray-900 text-gray-300">
       <div className="container mx-auto py-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="flex items-center justify-center md:justify-start">
+          <div className="flex flex-col items-center justify-center md:justify-start">
             <a
               href="https://www.youtube.com/channel/UCHWsGkCRqlNKnoxYkC_ZRxQ"
               target="_blank"
               rel="noreferrer"
             >
               <img
-                className="rounded-full w-20 h-20 md:w-24 md:h-24 mr-4 md:mr-0"
+                className="rounded-full w-20 h-20 md:w-24 md:h-24"
                 onError={() => setAvatar('./me.jpeg')}
                 src={Avatar}
                 alt="logo andres coello goyes"
               />
             </a>
             <div className="ml-3">
-              <p className="font-semibold text-xl md:text-2xl">Andrés Coello</p>
+              <p className="font-semibold text-xl lg:text-2xl">Andrés Coello</p>
               <p className="text-sm md:text-base">Full Stack Developer</p>
             </div>
           </div>
