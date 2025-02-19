@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "analyze": "ANALYZE=true next build"
+    "analyze": "ANALYZE=true next build",
+    "format": "prettier --write \"src/**/*.tsx\" \"src/**/*ts\" --write \"package.json\""
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.2.0",
@@ -28,7 +29,12 @@
     "eslint": "8.16.0",
     "eslint-config-next": "^14.2.0",
     "postcss": "^8.5.2",
+    "prettier": "^3.5.1",
     "tailwindcss": "^4.0.6",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
   }
 }
