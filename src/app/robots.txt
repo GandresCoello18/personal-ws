@@ -1,6 +1,0 @@
-User-Agent: *
-Allow: /
-Allow: /portafolio
-Allow: /resumen
-Allow: /sobre-mi
-Allow: /videos
