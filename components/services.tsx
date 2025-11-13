@@ -15,14 +15,14 @@ const services: Service[] = [
     icon: <Users className="w-8 h-8" />,
     title: "Mentoría 1-on-1",
     description:
-      "Sesiones personalizadas para acelerar tu desarrollo profesional. Guía directa y retroalimentación en tiempo real.",
+      "Sesiones personalizadas para acelerar tu desarrollo profesional. Guía directa y retroalimentación.",
     features: [
       "Sesiones de 1 hora personalizadas",
       "Revisión de código en vivo",
       "Ayuda en proyectos reales",
       "Acceso a recursos exclusivos",
     ],
-    price: "$50",
+    price: "$12",
     duration: "por sesión",
   },
   {
@@ -30,12 +30,12 @@ const services: Service[] = [
     title: "Cursos Intensivos",
     description: "Bootcamps especializados en tecnologías modernas. Aprende haciendo con proyectos reales.",
     features: [
-      "Programa de 4-8 semanas",
-      "20+ horas de contenido",
+      "Programa de 4-10 semanas",
+      "25+ horas de contenido",
       "Proyectos prácticos incluidos",
-      "Certificado de completitud",
+      "Parte de mentoría incluida",
     ],
-    price: "$299-$599",
+    price: "$199-$299",
     duration: "por curso",
   },
   {
@@ -48,8 +48,8 @@ const services: Service[] = [
       "Optimización de performance",
       "Estrategia tecnológica",
     ],
-    price: "Desde $500",
-    duration: "por proyecto",
+    price: "Desde $12",
+    duration: "por sesión",
   },
   {
     icon: <Video className="w-8 h-8" />,
@@ -59,7 +59,7 @@ const services: Service[] = [
     price: "Contactar",
     duration: "flexible",
   },
-  {
+  /*{
     icon: <Code2 className="w-8 h-8" />,
     title: "Code Review Profundo",
     description: "Revisión detallada de tu código con recomendaciones específicas y mejoras implementadas.",
@@ -79,12 +79,12 @@ const services: Service[] = [
     features: ["Proyectos reales", "Mentoría diaria", "Portfolio building", "Oportunidad laboral"],
     price: "Gratis",
     duration: "o oportunidad laboral",
-  },
+  },*/
 ]
 
 export function Services() {
   return (
-    <section id="services" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20">
+    <section id="services" className="py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <div className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
@@ -97,23 +97,19 @@ export function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="card-elevated p-6 md:p-8 flex flex-col h-full hover:border-accent/50 transition-colors group"
+              className="card-elevated p-6 md:p-5 flex flex-col h-full hover:border-accent/50 transition-colors group"
             >
-              {/* Icon */}
               <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:bg-accent/20 transition-colors">
                 {service.icon}
               </div>
 
-              {/* Content */}
               <h3 className="text-xl font-bold mb-3 text-foreground">{service.title}</h3>
               <p className="text-muted-foreground text-sm mb-6 flex-1">{service.description}</p>
 
-              {/* Features */}
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -123,7 +119,6 @@ export function Services() {
                 ))}
               </ul>
 
-              {/* Price */}
               <div className="pt-6 border-t border-border">
                 <div className="mb-4">
                   <p className="text-2xl font-bold text-primary">{service.price}</p>
@@ -137,13 +132,12 @@ export function Services() {
           ))}
         </div>
 
-        {/* FAQ Section */}
         <div className="bg-card border border-border rounded-xl p-8 md:p-12">
           <h3 className="text-2xl font-bold mb-8 text-foreground">Preguntas Frecuentes</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h4 className="font-bold mb-2 text-foreground">¿Dónde son las sesiones?</h4>
-              <p className="text-muted-foreground">100% online via Zoom. Puedes ser desde cualquier parte del mundo.</p>
+              <p className="text-muted-foreground">100% online por Google Meet o via Zoom. Puedes ser desde cualquier parte del mundo.</p>
             </div>
             <div>
               <h4 className="font-bold mb-2 text-foreground">¿Hay período de prueba?</h4>
@@ -156,8 +150,8 @@ export function Services() {
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-2 text-foreground">¿Certificados?</h4>
-              <p className="text-muted-foreground">Sí, recibes certificado de completitud en todos los cursos.</p>
+              <h4 className="font-bold mb-2 text-foreground">¿Seguimiento posterior?</h4>
+              <p className="text-muted-foreground">Sí, recibes soporte técnico y mentoría posterior a la finalización del curso. También puedes contactarme para cualquier consulta o problema que tengas.</p>
             </div>
           </div>
         </div>

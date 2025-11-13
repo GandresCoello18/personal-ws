@@ -11,56 +11,57 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "María González",
+    name: "Alberto Flores Conejo",
+    role: "Estudiante de Desarrollo web",
+    company: "España",
+    image: "https://dbwf8q1mv0cee.cloudfront.net/chi/api/user/dsp/eyjgt1ay3uiurvg0anwqtj6hrt6cwuq50.jpg/110x110cut/?v=1",
+    text: "Andrés es muy paciente y sabe lo que hace",
+    rating: 5,
+  },
+  {
+    name: "Juliana Amorim",
+    role: "Estudiante de Software Engineering",
+    company: "España",
+    text: "Andrés es un profesor mucho conocimiento y paciencia. Altamente recomendable! Gracias Andrés",
+    rating: 5,
+    image: "https://dbwf8q1mv0cee.cloudfront.net/chi/api/user/dsp/tzzfxeev3ejk84takcrer6c1ll_nz4rw0.jpg/110x110cut/?v=1",
+  },
+  {
+    name: "Clara Foscaldi",
+    role: "Frontend Vue.js Developer",
+    company: "Argentina",
+    image: "https://d2d74a7s2nfnwy.cloudfront.net/i/avatar4.png?v=1",
+    text: "Excelente profesor!! Es muy dedicado y enseña con mucha paciencia. Además de que tiene buena disposición y muestra compromiso hacia sus alumnos.",
+    rating: 5,
+  },
+  {
+    name: "Felipe Stevenson Fernandez",
+    role: "Practicante de Backend",
+    company: "Chile",
+    image: "https://d2d74a7s2nfnwy.cloudfront.net/i/avatar4.png?v=1",
+    text: "Comprometido con lo que se le pide ayuda, explica muy bien, paso por paso",
+    rating: 5,
+  },
+  {
+    name: "Pedro",
     role: "Junior Developer",
-    company: "Tech Startup",
-    image: "/placeholder.svg?key=v2b0a",
-    text: "La mentoría de Andres fue transformacional. En 3 meses pasé de ser completamente principiante a conseguir mi primer trabajo como developer. Su enfoque práctico es increíble.",
+    company: "Colombia",
+    image: "https://d2d74a7s2nfnwy.cloudfront.net/i/avatar4.png?v=1",
+    text: "Lo recomiendo muchísimo, se adaptó totalmente a mi situación, fué paciente y logré sobradamente lo que buscaba.",
     rating: 5,
   },
   {
-    name: "Carlos Rodríguez",
-    role: "Tech Lead",
-    company: "Agencia Digital",
-    text: "Contratamos a Andres para consultoría técnica. Sus recomendaciones de arquitectura mejoraron nuestra performance en un 40%. Altamente recomendado.",
-    rating: 5,
-  },
-  {
-    name: "Sofia Martínez",
-    role: "Full Stack Developer",
-    company: "SaaS Company",
-    image: "/placeholder.svg?key=k9x4m",
-    text: "Tomé el curso intensivo y fue la mejor inversión en mi carrera. Aprendí más en 4 semanas que en 6 meses estudiando solo.",
-    rating: 5,
-  },
-  {
-    name: "Juan Pérez",
-    role: "Founder",
-    company: "E-commerce Startup",
-    image: "/placeholder.svg?key=a2w1b",
-    text: "Andres desarrolló nuestra plataforma de ventas. Es un profesional con atención al detalle y comprometido con los resultados.",
-    rating: 5,
-  },
-  {
-    name: "Laura Fernández",
-    role: "Self-taught Developer",
-    company: "Freelancer",
-    image: "/placeholder.svg?key=z8p3j",
-    text: "El code review fue muy valioso. Recibí feedback específico que mejoró significativamente la calidad de mi código.",
-    rating: 5,
-  },
-  {
-    name: "Miguel López",
-    role: "Product Manager",
-    company: "Tech Scale-up",
-    image: "/placeholder.svg?key=c4n6l",
-    text: "Andres dirigió un workshop para nuestro equipo. Muy inspirador y con contenido práctico. Todo el equipo aprendió mucho.",
+    name: "Isabel fernandez",
+    role: "Estudiante con proyecto final",
+    company: "Republica Dominicana",
+    image: "https://d2d74a7s2nfnwy.cloudfront.net/i/avatar4.png?v=1",
+    text: "Buen profesor, se preocupa por revisar la materia para que todo quede claro.",
     rating: 5,
   },
 ]
 
 const stats = [
-  { value: "500+", label: "Estudiantes Satisfechos" },
+  { value: "150+", label: "Estudiantes Satisfechos" },
   { value: "4.9/5", label: "Rating Promedio" },
   { value: "100%", label: "Tasa de Recomendación" },
   { value: "5+", label: "Años de Experiencia" },
@@ -70,7 +71,6 @@ export function Testimonials() {
   return (
     <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-6xl mx-auto">
-        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center">
@@ -80,7 +80,6 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Testimonials Title */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="section-title">Qué Dicen los Estudiantes</h2>
           <p className="section-subtitle max-w-2xl mx-auto">
@@ -88,21 +87,17 @@ export function Testimonials() {
           </p>
         </div>
 
-        {/* Featured Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, idx) => (
             <div key={idx} className="card-elevated p-6 md:p-8 flex flex-col h-full">
-              {/* Rating */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star key={i} size={18} className="fill-accent text-accent" />
                 ))}
               </div>
 
-              {/* Quote */}
               <p className="text-muted-foreground italic mb-6 flex-1 leading-relaxed">"{testimonial.text}"</p>
 
-              {/* Author */}
               <div className="flex items-center gap-3 pt-6 border-t border-border">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent overflow-hidden flex-shrink-0">
                   <img

@@ -19,8 +19,8 @@ export default function Home() {
       <Services />
       <ClassgapSection />
       <Testimonials />
-      <CTA />
       <PaymentMethods />
+      <CTA />
       <Footer />
     </main>
   )

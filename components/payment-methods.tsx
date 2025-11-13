@@ -48,7 +48,6 @@ export function PaymentMethods() {
   return (
     <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="section-title">Métodos de Pago</h2>
           <p className="section-subtitle max-w-2xl mx-auto">
@@ -56,7 +55,6 @@ export function PaymentMethods() {
           </p>
         </div>
 
-        {/* Payment Methods Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {paymentMethods.map((method, idx) => (
             <div key={idx} className="card-elevated p-6 text-center hover:shadow-lg transition-shadow duration-300">
@@ -67,7 +65,6 @@ export function PaymentMethods() {
           ))}
         </div>
 
-        {/* Info Message */}
         <div className="mt-12 p-6 md:p-8 bg-muted/50 rounded-lg border border-border text-center">
           <p className="text-muted-foreground">
             Contacta conmigo para coordinar los detalles de pago según el método que prefieras.{" "}

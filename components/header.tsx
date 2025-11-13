@@ -18,15 +18,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg">
-            AC
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg">
+            <img src="/me.jpg" alt="Andres Coello" className="w-full h-full rounded-full object-cover" />
           </div>
           <span className="hidden sm:inline font-bold text-foreground text-lg">Andres Coello</span>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
@@ -42,7 +40,6 @@ export function Header() {
           </a>
         </div>
 
-        {/* Mobile Menu */}
         <button
           className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
           onClick={() => setIsOpen(!isOpen)}

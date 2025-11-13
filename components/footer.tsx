@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail, ExternalLink } from "lucide-react"
+import { Github, Linkedin, Youtube, Mail, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 export function Footer() {
@@ -6,9 +6,8 @@ export function Footer() {
 
   const links = {
     producto: [
-      { label: "Proyectos", href: "#projects" },
-      { label: "Servicios", href: "#services" },
-      { label: "Blog", href: "https://blog.example.com" },
+      { label: "Sobre Meniuz", href: "https://meniuz.com/about/" },
+      { label: "Sobre Classgap", href: "https://classgap.com/about/" },
     ],
     recursos: [
       { label: "Documentación", href: "#" },
@@ -18,27 +17,24 @@ export function Footer() {
     legal: [
       { label: "Privacidad", href: "#" },
       { label: "Términos", href: "#" },
-      { label: "Cookies", href: "#" },
     ],
   }
 
   const social = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, href: "mailto:contacto@andrescoello.com", label: "Email" },
+    { icon: Github, href: "https://github.com/GandresCoello18", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com/in/andrescoellogoyes/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:goyeselcoca@gmail.com", label: "Email" },
+    { icon: Youtube, href: "https://www.youtube.com/@andrescoellogoyes", label: "Youtube" },
   ]
 
   return (
     <footer className="bg-card border-t border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-primary-foreground font-bold">
-                AC
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center text-primary-foreground font-bold">
+                <img src="/me.jpg" alt="Andres Coello" className="w-full h-full rounded-full object-cover" />
               </div>
               <span className="font-bold text-foreground">Andres Coello</span>
             </Link>
@@ -62,7 +58,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links Columns */}
           <div>
             <h4 className="font-bold text-foreground mb-4">Producto</h4>
             <ul className="space-y-3">
@@ -109,16 +104,15 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Andres Coello. Todos los derechos reservados.
+              © {currentYear} Andres Coello.
             </p>
             <p className="text-sm text-muted-foreground">
               Diseñado y desarrollado con
               <span className="text-accent mx-1">❤️</span>
-              using Next.js + Tailwind
+              por Andres Coello
             </p>
           </div>
         </div>

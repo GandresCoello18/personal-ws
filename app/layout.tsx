@@ -7,17 +7,114 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-  title: "Andres Coello - Full Stack Developer & Mentor",
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://your-domain.com"
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Andres Coello",
+  jobTitle: "Software Developer, Mentor y Tutor",
+  url: siteUrl,
+  image: `${siteUrl}/profile-photo.jpg`,
+  sameAs: [
+    "https://www.linkedin.com/in/andres-coello",
+    "https://github.com/andres-coello",
+  ],
   description:
-    "Full Stack Developer y Mentor especializado en programación web. Proyectos destacados, servicios educativos y consultoría para desarrolladores.",
-  keywords: "developer, full stack, mentor, programación, web development, freelancer",
-  generator: "v0.app",
-  openGraph: {
-    title: "Andres Coello - Full Stack Developer & Mentor",
-    description: "Full Stack Developer y Mentor especializado en programación web",
-    type: "website",
+    "Mentorías y tutorías personalizadas en desarrollo web, programación moderna y buenas prácticas de software.",
+  knowsAbout: [
+    "Desarrollo Full Stack",
+    "Next.js",
+    "React",
+    "Mentoría tecnológica",
+    "Tutorías personalizadas",
+  ],
+  areaServed: "Global",
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Mentoría personalizada en desarrollo web",
+      availability: "https://schema.org/InStock",
+      url: `${siteUrl}#services`,
+    },
+    {
+      "@type": "Offer",
+      name: "Tutorías 1:1 para desarrolladores",
+      availability: "https://schema.org/InStock",
+      url: `${siteUrl}#services`,
+    },
+  ],
+}
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Andres Coello - Software Developer, Mentor & Tutor",
+    template: "%s | Andres Coello",
   },
+  description:
+    "Andres Coello es Software Developer, Mentor y Tutor especializado en crear experiencias digitales y acompañar a desarrolladores a nivel profesional.",
+  keywords: [
+    "software developer",
+    "full stack developer",
+    "mentor tecnológico",
+    "tutorías de programación",
+    "consultoría tecnológica",
+    "desarrollo web",
+  ],
+  generator: "v0.app",
+  applicationName: "Andres Coello Portfolio",
+  category: "technology",
+  creator: "Andres Coello",
+  authors: [{ name: "Andres Coello", url: siteUrl }],
+  publisher: "Andres Coello",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: siteUrl,
+    title: "Andres Coello - Software Developer, Mentor & Tutor",
+    description:
+      "Servicios profesionales de desarrollo de software, mentorías y tutorías para impulsar tu carrera tecnológica.",
+    siteName: "Andres Coello",
+    images: [
+      {
+        url: "/real-time-analytics-dashboard.png",
+        width: 1200,
+        height: 630,
+        alt: "Vista previa del portafolio y servicios de Andres Coello",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Andres Coello - Software Developer, Mentor & Tutor",
+    description:
+      "Mentorías, tutorías y desarrollo de software a medida con Andres Coello.",
+    creator: "@andres_coello",
+    images: ["/real-time-analytics-dashboard.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-light-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+    shortcut: "/icon-dark-32x32.png",
+  },
+  manifest: "/site.webmanifest",
+  themeColor: "#1c4e5a",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "",
+  },
+  referrer: "strict-origin-when-cross-origin",
 }
 
 export default function RootLayout({
@@ -30,7 +127,12 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#1c4e5a" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
       </head>
       <body className={`font-sans antialiased`}>
         {children}

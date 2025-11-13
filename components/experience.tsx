@@ -81,7 +81,6 @@ export function Experience() {
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {experiences.map((exp, idx) => (
             <div key={idx} className="card-elevated p-6 md:p-8 border-l-4 border-l-accent">
@@ -106,14 +105,13 @@ export function Experience() {
           ))}
         </div>
 
-        {/* Skills */}
         <div className="mt-16 pt-16 border-t border-border">
           <h3 className="text-2xl font-bold mb-8 text-foreground">Habilidades Técnicas</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="card-elevated p-6">
               <h4 className="font-bold text-lg mb-4 text-primary">Frontend</h4>
               <div className="flex flex-wrap gap-2">
-                {["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "Framer Motion"].map((skill) => (
+                {["React", "Next.js", "Redux", "Angular", "Svelte", "Blade", "Meteor.js", "TypeScript", "Tailwind CSS", "Vue.js", "Framer Motion"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
                     {skill}
                   </span>
@@ -124,7 +122,7 @@ export function Experience() {
             <div className="card-elevated p-6">
               <h4 className="font-bold text-lg mb-4 text-accent">Backend</h4>
               <div className="flex flex-wrap gap-2">
-                {["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "GraphQL"].map((skill) => (
+                {["Node.js", "Metero.js", "Fastify", "GraphQl", "Express", "Python", "PostgreSQL", "MySQL", "MongoDB", "Firebase"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">
                     {skill}
                   </span>
@@ -135,7 +133,7 @@ export function Experience() {
             <div className="card-elevated p-6">
               <h4 className="font-bold text-lg mb-4 text-secondary">DevOps & Cloud</h4>
               <div className="flex flex-wrap gap-2">
-                {["AWS", "Docker", "Git", "CI/CD", "Vercel", "Firebase"].map((skill) => (
+                {["AWS", "Docker", "Digital Ocean", "Railway", "Render", "Monolito", "Microservicios", "Git", "CI/CD", "Vercel", "Firebase"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">
                     {skill}
                   </span>

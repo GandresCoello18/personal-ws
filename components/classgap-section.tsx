@@ -10,7 +10,6 @@ export function ClassgapSection() {
       className="py-16 md:py-24 px-4 md:px-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800"
     >
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
             <span className="text-sm font-semibold text-blue-700 dark:text-blue-300">Classgap Verified Tutor</span>
@@ -19,14 +18,12 @@ export function ClassgapSection() {
             5+ Años de Experiencia Comprobada
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Mentor verificado en Classgap con una trayectoria sólida ayudando a cientos de estudiantes a alcanzar sus
+            Tutor y mentor verificado en Classgap con una trayectoria sólida ayudando a cientos de estudiantes a alcanzar sus
             objetivos en desarrollo web y programación.
           </p>
         </div>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          {/* Stat: Years */}
           <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
@@ -38,7 +35,6 @@ export function ClassgapSection() {
             <p className="text-sm text-slate-600 dark:text-slate-400">Años en la plataforma</p>
           </div>
 
-          {/* Stat: Reviews */}
           <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
@@ -50,7 +46,6 @@ export function ClassgapSection() {
             <p className="text-sm text-slate-600 dark:text-slate-400">Calificaciones 5 estrellas</p>
           </div>
 
-          {/* Stat: Students */}
           <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 rounded-lg bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
@@ -58,11 +53,10 @@ export function ClassgapSection() {
               </div>
               <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Estudiantes</span>
             </div>
-            <p className="text-3xl font-bold text-slate-900 dark:text-white">500+</p>
+            <p className="text-3xl font-bold text-slate-900 dark:text-white">150+</p>
             <p className="text-sm text-slate-600 dark:text-slate-400">Alumnos mentorados</p>
           </div>
 
-          {/* Stat: Rating */}
           <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
@@ -75,12 +69,10 @@ export function ClassgapSection() {
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
-          {/* Left: Description */}
+        <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
           <div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              Mentor Experimentado y Certificado
+              Tutor y mentor Experimentado Certificado
             </h3>
             <div className="space-y-4 text-slate-600 dark:text-slate-300">
               <p>
@@ -99,15 +91,14 @@ export function ClassgapSection() {
             </div>
           </div>
 
-          {/* Right: CTA and Info */}
           <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 shadow-sm">
             <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Áreas de Especialización</h4>
             <ul className="space-y-3 mb-6">
               {[
                 "Desarrollo Web Full Stack",
                 "React y Modern JavaScript",
+                "Node y Servicios distribuidos",
                 "Mentoría en Carrera Dev",
-                "Preparación de Entrevistas",
                 "Proyectos Prácticos",
                 "Consultoría Técnica",
               ].map((item) => (
@@ -126,21 +117,6 @@ export function ClassgapSection() {
               Ver Perfil en Classgap →
             </Link>
           </div>
-        </div>
-
-        {/* Testimonial Quote */}
-        <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 text-center">
-          <div className="flex justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-            ))}
-          </div>
-          <p className="text-lg italic text-slate-700 dark:text-slate-300 max-w-2xl mx-auto mb-3">
-            "Andrés es un tutor excepcional. No es un principiante - tiene la experiencia y paciencia para guiarte a
-            través de conceptos difíciles. Altamente recomendado para cualquiera que busque crecimiento real en
-            desarrollo web."
-          </p>
-          <p className="text-sm font-semibold text-slate-900 dark:text-white">Estudiante verificado de Classgap</p>
         </div>
       </div>
     </section>
