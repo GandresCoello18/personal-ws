@@ -107,21 +107,18 @@ export function Projects() {
           </p>
         </div>
 
-        {/* Featured Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {filteredProjects.slice(0, 2).map((project) => (
             <ProjectCard key={project.id} project={project} featured />
           ))}
         </div>
 
-        {/* All Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {filteredProjects.slice(2).map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        {/* View All CTA */}
         <div className="text-center mt-16">
           <a href="#contact" className="btn-primary inline-flex items-center gap-2">
             Ver Todos los Proyectos
@@ -136,7 +133,6 @@ export function Projects() {
 function ProjectCard({ project, featured }: { project: Project; featured?: boolean }) {
   return (
     <div className="card-elevated overflow-hidden group hover:scale-105 transition-all duration-300 flex flex-col h-full">
-      {/* Image */}
       <div className="relative h-48 md:h-64 overflow-hidden bg-muted">
         <img
           src={project.image || "/placeholder.svg"}
@@ -146,12 +142,10 @@ function ProjectCard({ project, featured }: { project: Project; featured?: boole
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      {/* Content */}
       <div className="p-6 flex-1 flex flex-col">
         <h3 className="text-lg md:text-xl font-bold mb-2 text-foreground line-clamp-2">{project.title}</h3>
         <p className="text-muted-foreground text-sm md:text-base mb-4 line-clamp-3 flex-1">{project.description}</p>
 
-        {/* Stats */}
         {project.stats && (
           <div className="grid grid-cols-3 gap-2 mb-4 pb-4 border-b border-border">
             {project.stats.map((stat, idx) => (
@@ -163,7 +157,6 @@ function ProjectCard({ project, featured }: { project: Project; featured?: boole
           </div>
         )}
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <span key={tag} className="px-2 py-1 bg-accent/10 text-accent text-xs rounded font-medium">
@@ -172,7 +165,6 @@ function ProjectCard({ project, featured }: { project: Project; featured?: boole
           ))}
         </div>
 
-        {/* Links */}
         <div className="flex gap-3 pt-4 border-t border-border">
           <a
             href={project.link}

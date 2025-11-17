@@ -16,21 +16,67 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
 
-  useEffect(() => {
+  // Función para aplicar los datos del servicio al formulario
+  const applyServiceData = (service: string, description: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      asunto: service ? `Información sobre: ${service}` : prev.asunto,
+      mensaje: description
+        ? `Estoy interesado en ${service || "este servicio"}. ${description}\n\nMe gustaría más información sobre los detalles, precios y próximos pasos.`
+        : prev.mensaje,
+    }))
+  }
+
+  // Función para leer y aplicar los parámetros de la URL
+  const readUrlParams = () => {
     const params = new URLSearchParams(window.location.search)
     const service = params.get("service")
     const description = params.get("description")
 
     if (service || description) {
-      setFormData((prev) => ({
-        ...prev,
-        asunto: service ? `Información sobre: ${service}` : "",
-        mensaje: description
-          ? `Estoy interesado en ${service}. ${description}\n\nMe gustaría más información sobre los detalles, precios y próximos pasos.`
-          : "",
-      }))
-      // Limpiar la URL
-      window.history.replaceState({}, "", "#contact")
+      applyServiceData(service || "", description || "")
+      // Limpiar los query params de la URL pero mantener el hash
+      const cleanUrl = `${window.location.pathname}#contact`
+      window.history.replaceState({}, "", cleanUrl)
+      return true
+    }
+    return false
+  }
+
+  useEffect(() => {
+    // Leer parámetros al montar el componente
+    readUrlParams()
+
+    // Escuchar evento personalizado cuando se cambia la URL desde Services
+    const handleUrlChanged = (event: Event) => {
+      const customEvent = event as CustomEvent<{ service: string; description: string }>
+      if (customEvent.detail) {
+        applyServiceData(customEvent.detail.service, customEvent.detail.description)
+        // Limpiar los query params de la URL pero mantener el hash
+        const cleanUrl = `${window.location.pathname}#contact`
+        window.history.replaceState({}, "", cleanUrl)
+      }
+    }
+
+    // Escuchar cambios en la URL (popstate para navegación del navegador)
+    const handlePopState = () => {
+      readUrlParams()
+    }
+
+    window.addEventListener("urlChanged", handleUrlChanged as EventListener)
+    window.addEventListener("popstate", handlePopState)
+
+    // También verificar periódicamente si hay parámetros nuevos (fallback)
+    const interval = setInterval(() => {
+      if (window.location.search.includes("service=") || window.location.search.includes("description=")) {
+        readUrlParams()
+      }
+    }, 300)
+
+    return () => {
+      window.removeEventListener("urlChanged", handleUrlChanged as EventListener)
+      window.removeEventListener("popstate", handlePopState)
+      clearInterval(interval)
     }
   }, [])
 

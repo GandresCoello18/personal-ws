@@ -90,7 +90,19 @@ export function Services() {
       service: serviceTitle,
       description: serviceDescription,
     })
-    window.location.href = `#contact?${params.toString()}`
+    
+    // Actualizar la URL con los query params y luego hacer scroll al formulario
+    const newUrl = `${window.location.pathname}?${params.toString()}#contact`
+    window.history.pushState({}, "", newUrl)
+    
+    // Disparar evento personalizado para que ContactForm detecte el cambio
+    window.dispatchEvent(new CustomEvent("urlChanged", { detail: { service: serviceTitle, description: serviceDescription } }))
+    
+    // Hacer scroll al formulario de contacto
+    const contactSection = document.getElementById("contact")
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
   }
 
   return (

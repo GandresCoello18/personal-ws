@@ -1,6 +1,8 @@
 import nodemailer from "nodemailer"
 import type { NextRequest } from "next/server"
 import { NextResponse } from "next/server"
+import { getUserConfirmationTemplate } from "./templates/user-confirmation"
+import { getAdminNotificationTemplate } from "./templates/admin-notification"
 
 export async function POST(request: NextRequest) {
   try {
@@ -27,32 +29,14 @@ export async function POST(request: NextRequest) {
       from: process.env.GMAIL_USER,
       to: email,
       subject: `Confirmación: ${asunto}`,
-      html: `
-        <h2>Hola ${nombre},</h2>
-        <p>Gracias por tu mensaje. He recibido tu solicitud con el siguiente contenido:</p>
-        <hr />
-        <p><strong>Asunto:</strong> ${asunto}</p>
-        <p><strong>Mensaje:</strong></p>
-        <p>${mensaje.replace(/\n/g, "<br />")}</p>
-        <hr />
-        <p>Te responderé en máximo 24 horas.</p>
-        <p>Saludos,<br />Andrés Coello</p>
-      `,
+      html: getUserConfirmationTemplate(nombre, asunto, mensaje),
     }
 
     const mailOptionsAdmin = {
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_RECIPIENT,
       subject: `Nuevo Contacto: ${asunto}`,
-      html: `
-        <h2>Nuevo mensaje de contacto</h2>
-        <p><strong>Nombre:</strong> ${nombre}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Asunto:</strong> ${asunto}</p>
-        <hr />
-        <p><strong>Mensaje:</strong></p>
-        <p>${mensaje.replace(/\n/g, "<br />")}</p>
-      `,
+      html: getAdminNotificationTemplate(nombre, email, asunto, mensaje),
     }
 
     await transporter.sendMail(mailOptionsUser)
