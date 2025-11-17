@@ -1,16 +1,17 @@
 "use client"
 
-import { useState } from "react"
-import { ExternalLink, Github, Code2 } from "lucide-react"
+import { useState, useEffect } from "react"
+import { ExternalLink, Github, Lock, Code2 } from "lucide-react"
 
 interface Project {
   id: string
   title: string
   description: string
-  image: string
+  images: string[]
   tags: string[]
   link: string
   github?: string
+  isPrivate?: boolean
   featured: boolean
   stats?: {
     label: string
@@ -21,81 +22,82 @@ interface Project {
 const projects: Project[] = [
   {
     id: "1",
-    title: "Plataforma E-Learning SaaS",
+    title: "Meniuz App",
     description:
-      "Plataforma de cursos online con sistema de pagos integrado, gestión de estudiantes y análisis avanzado. Más de 50k usuarios activos mensualmente.",
-    image: "/elearning-platform-dashboard.jpg",
-    tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "TailwindCSS"],
-    link: "https://example.com",
-    github: "https://github.com",
+      "Meniuz es una aplicación móvil y web que permite a los usuarios encontrar y descubrir la castronomia de las dintintas ciudades del Ecuador, entran categorias como: restaurantes, cafeterias, heladerias y licorerias.",
+    images: [
+      "/meniuz-home-app.png",
+      "/meniuz-list-cities.png",
+      "/meniuz-menu-business.png",
+      "/meniuz-login.png",
+    ],
+    tags: ["Next.js", "TypeScript", "GraphQL", "Express.js", "CI/CD", "Redis", "Kotlin", "Swift", "Stripe", "MySQL", "TailwindCSS"],
+    link: "https://onelink.to/meniuz",
+    github: "",
+    isPrivate: true,
     featured: true,
     stats: [
-      { label: "Usuarios", value: "50k+" },
-      { label: "Cursos", value: "200+" },
-      { label: "Ingresos", value: "$500k+" },
+      { label: "Usuarios", value: "5K+" },
+      { label: "Ciudades", value: "20+" },
+      { label: "Categorias", value: "4+" },
     ],
   },
   {
     id: "2",
-    title: "Dashboard Analítica Real-Time",
+    title: "Dashboard Padel Track",
     description:
-      "Dashboard interactivo que procesa millones de eventos en tiempo real. Implementado con websockets y visualizaciones dinámicas.",
-    image: "/real-time-analytics-dashboard.png",
-    tags: ["React", "Socket.io", "Node.js", "MongoDB", "Chart.js"],
-    link: "https://example.com",
-    github: "https://github.com",
+      "Dashboard interactivo para el seguimiento de partidos de padel, permite a los usuarios ver el historial de partidos, estadisticas de los jugadores, y mas, ademas de poder crear partidos jugadores y coach.",
+    images: [
+      "/videos-cuestionario.jpeg",
+      "/padeltrack-public.png",
+      "/unnamed (1).webp",
+      "/unnamed (2).webp",
+      "/unnamed (3).webp",
+    ],
+    tags: ["React", "Socket.io", "Express.js", "CI/CD", "MongoDB", "Chart.js", "Vimeo", "Monolito", "Arquitectura Modular"],
+    link: "https://admin.padeltrack.app/",
+    github: "",
+    isPrivate: true,
     featured: true,
     stats: [
-      { label: "Latencia", value: "<100ms" },
-      { label: "Uptime", value: "99.9%" },
-      { label: "RPS", value: "10k+" },
+      { label: "Partidos", value: "10k+" },
+      { label: "Jugadores", value: "100+" },
+      { label: "Coachs", value: "10+" },
     ],
   },
   {
     id: "3",
-    title: "App Móvil Fitness",
+    title: "Spotify Clone App",
     description:
-      "Aplicación React Native para seguimiento de entrenamientos con IA que personaliza rutinas. Disponible en iOS y Android.",
-    image: "/fitness-mobile-app-interface.png",
-    tags: ["React Native", "Firebase", "TensorFlow", "Expo"],
-    link: "https://example.com",
-    featured: false,
-  },
-  {
-    id: "4",
-    title: "CMS Headless Personalizado",
-    description:
-      "Sistema de gestión de contenidos personalizado con API GraphQL. Utilizado por 15+ agencias digitales.",
-    image: "/cms-headless-content-management.jpg",
-    tags: ["GraphQL", "Node.js", "PostgreSQL", "Docker"],
-    link: "https://example.com",
-    featured: false,
-  },
-  {
-    id: "5",
-    title: "Marketplace B2B Tecnológico",
-    description: "Plataforma de marketplace especializada en servicios tecnológicos. Conecta proveedores con empresas.",
-    image: "/marketplace-platform-b2b.jpg",
-    tags: ["Next.js", "Stripe Connect", "PostgreSQL", "Redis"],
-    link: "https://example.com",
-    featured: false,
-  },
-  {
-    id: "6",
-    title: "Generador de Reportes PDF",
-    description:
-      "Herramienta para generar reportes personalizados en PDF con gráficos dinámicos y exportación en múltiples formatos.",
-    image: "/pdf-report-generator-tool.jpg",
-    tags: ["Node.js", "Puppeteer", "PDF-lib", "Express"],
-    link: "https://example.com",
+      "Spotify Clone App es una aplicación web que permite a los usuarios escuchar musica, crear playlists, conocer artistas y sus albunes, puedes agregar o quitar de tus favoritos y se vera reflejado en tu perfil origial de Spotify.",
+    images: [
+      "/spotify-clone-app.png",
+      "/1756679537331.jpg",
+    ],
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Api", "Spotify API"],
+    link: "https://andres-coello-full-stack.vercel.app/",
     featured: false,
   },
 ]
 
 export function Projects() {
-  const [activeCategory, setActiveCategory] = useState<"all" | "featured">("featured")
+  const [showAll, setShowAll] = useState(false)
+  const featuredProjects = projects.filter((p) => p.featured)
+  const otherProjects = projects.filter((p) => !p.featured)
 
-  const filteredProjects = activeCategory === "featured" ? projects.filter((p) => p.featured) : projects
+  const handleShowAll = () => {
+    setShowAll(true)
+    // Hacer scroll suave a la sección de proyectos adicionales después de un pequeño delay
+    setTimeout(() => {
+      const projectsSection = document.getElementById("projects")
+      if (projectsSection && otherProjects.length > 0) {
+        const additionalProjectsElement = projectsSection.querySelector('[data-additional-projects]')
+        if (additionalProjectsElement) {
+          additionalProjectsElement.scrollIntoView({ behavior: "smooth", block: "start" })
+        }
+      }
+    }, 100)
+  }
 
   return (
     <section id="projects" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background">
@@ -108,37 +110,104 @@ export function Projects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {filteredProjects.slice(0, 2).map((project) => (
+          {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} featured />
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {filteredProjects.slice(2).map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+        {!showAll && otherProjects.length && (
+          <div className="text-center mt-16">
+            <button
+              onClick={handleShowAll}
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              Ver Todos los Proyectos
+              <Code2 size={20} />
+            </button>
+          </div>
+        )}
 
-        <div className="text-center mt-16">
-          <a href="#contact" className="btn-primary inline-flex items-center gap-2">
-            Ver Todos los Proyectos
-            <Code2 size={20} />
-          </a>
-        </div>
+        {showAll && otherProjects.length && (
+          <div data-additional-projects className="mt-16 space-y-8">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Otros Proyectos</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Más proyectos en los que he trabajado
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 space-y-4">
+              {otherProjects.map((project) => (
+                <div key={project.id} className="max-w-4xl mx-auto">
+                  <ProjectCard project={project} />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )
 }
 
 function ProjectCard({ project, featured }: { project: Project; featured?: boolean }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isTransitioning, setIsTransitioning] = useState(false)
+
+  const images = project.images && project.images.length > 0 ? project.images : ["/placeholder.svg"]
+
+  useEffect(() => {
+    if (images.length <= 1) return
+
+    // Pre-cargar todas las imágenes
+    images.forEach((image) => {
+      const img = new Image()
+      img.src = image
+    })
+
+    const interval = setInterval(() => {
+      setIsTransitioning(true)
+      
+      setTimeout(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % images.length)
+        setTimeout(() => {
+          setIsTransitioning(false)
+        }, 50)
+      }, 400)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [images])
+
   return (
     <div className="card-elevated overflow-hidden group hover:scale-105 transition-all duration-300 flex flex-col h-full">
       <div className="relative h-48 md:h-64 overflow-hidden bg-muted">
-        <img
-          src={project.image || "/placeholder.svg"}
-          alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-        />
+        <div className="relative w-full h-full">
+          {images.map((image, index) => {
+            const isActive = index === currentImageIndex
+            const isNext = index === (currentImageIndex + 1) % images.length
+            
+            return (
+              <img
+                key={`${project.id}-${index}`}
+                src={image || "/placeholder.svg"}
+                alt={`${project.title} - Imagen ${index + 1}`}
+                className={`absolute inset-0 w-full h-full object-cover ${
+                  isActive
+                    ? isTransitioning
+                      ? "opacity-100 blur-md scale-105"
+                      : "opacity-100 blur-0 scale-100"
+                    : isNext && isTransitioning
+                    ? "opacity-0 blur-md scale-105"
+                    : "opacity-0 blur-0 scale-100"
+                } group-hover:scale-110`}
+                style={{
+                  transition: "opacity 600ms cubic-bezier(0.4, 0, 0.2, 1), filter 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 600ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  zIndex: isActive ? 10 : isNext ? 5 : 1,
+                }}
+              />
+            )
+          })}
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
@@ -185,6 +254,12 @@ function ProjectCard({ project, featured }: { project: Project; featured?: boole
               Código
               <Github size={16} />
             </a>
+          )}
+          {project.isPrivate && (
+            <span className="flex-1 flex items-center justify-center gap-2 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium">
+              Privado
+              <Lock size={16} />
+            </span>
           )}
         </div>
       </div>
