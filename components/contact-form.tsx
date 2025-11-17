@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Send, Loader } from "lucide-react"
 
 export function ContactForm() {
@@ -15,6 +15,24 @@ export function ContactForm() {
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const service = params.get("service")
+    const description = params.get("description")
+
+    if (service || description) {
+      setFormData((prev) => ({
+        ...prev,
+        asunto: service ? `Información sobre: ${service}` : "",
+        mensaje: description
+          ? `Estoy interesado en ${service}. ${description}\n\nMe gustaría más información sobre los detalles, precios y próximos pasos.`
+          : "",
+      }))
+      // Limpiar la URL
+      window.history.replaceState({}, "", "#contact")
+    }
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -39,7 +57,19 @@ export function ContactForm() {
     setLoading(true)
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Error al enviar el email")
+      }
 
       // Reset form and show success
       setFormData({ nombre: "", email: "", asunto: "", mensaje: "" })
@@ -48,7 +78,7 @@ export function ContactForm() {
       // Hide success message after 5 seconds
       setTimeout(() => setSubmitted(false), 5000)
     } catch (err) {
-      setError("Ocurrió un error al enviar el mensaje. Intenta de nuevo.")
+      setError(err instanceof Error ? err.message : "Ocurrió un error al enviar el mensaje. Intenta de nuevo.")
     } finally {
       setLoading(false)
     }

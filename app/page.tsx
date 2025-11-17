@@ -8,6 +8,7 @@ import { Testimonials } from "@/components/testimonials"
 import { CTA } from "@/components/cta"
 import { PaymentMethods } from "@/components/payment-methods"
 import { Footer } from "@/components/footer"
+import { ClassesGallery } from "@/components/classes-gallery"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Services />
+      <ClassesGallery />
       <ClassgapSection />
       <Testimonials />
       <PaymentMethods />

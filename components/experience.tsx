@@ -1,74 +1,81 @@
-import { Briefcase, GraduationCap, Award } from "lucide-react"
+import Image from 'next/image';
 
 interface ExperienceItem {
   title: string
   company: string
   period: string
   description: string
-  type: "work" | "education" | "certification"
+  image: string
 }
 
 const experiences: ExperienceItem[] = [
   {
-    type: "work",
-    title: "Senior Full Stack Developer",
-    company: "Tech Startup Innovadora",
+    image: "mims_tech_corp_logo.jpg",
+    title: "Semi-Senior Backend Developer",
+    company: "MIMS Tech Corp",
+    period: "2025 - Presente",
+    description:
+      "Lidero el desarrollo de un SDK orientado a facilitar la integración de múltiples servicios y funcionalidades mediante paquetes npm. Mi rol incluye la definición de la arquitectura, diseño de APIs internas, aseguramiento de calidad del código y aplicación de estándares de seguridad, incluyendo Row-Level Security (RLS) para el control granular de acceso a los datos. Además, colaboro estrechamente con equipos de producto y QA para garantizar la escalabilidad, mantenibilidad y cumplimiento de las mejores prácticas de desarrollo seguro en entornos modernos de distribución de software.",
+  },
+  {
+    image: "classgap_logo.jpg",
+    title: "Profesor de clases particulares / Programación",
+    company: "Classgap",
     period: "2023 - Presente",
     description:
-      "Lideré el desarrollo de aplicaciones web escalables usando React, Node.js y bases de datos NoSQL. Mentoricé 5+ desarrolladores junior en buenas prácticas de código y arquitectura.",
+      "Guíe a estudiantes en la implementación de proyectos reales, fomentando buenas prácticas de programación, optimización de código y resolución de problemas. Impartí más de 150 clases (pagadas) personalizadas de desarrollo web y móvil a estudiantes de diversos niveles, adaptando los contenidos a sus necesidades y objetivos específicos.",
   },
   {
-    type: "work",
+    image: "codingsweb_logo.jpg",
+    title: "Maestro de Frontend Developer / React / Bootcamp",
+    company: "Codings Academy",
+    period: "2025-06 - 2022-09",
+    description: "Entablé una relación directa entre tutor y estudiantes para guiarlos en el camino del front-end developer, no solo tratando temas de programación sino también, de diseño, rendimiento, tiempo de respuestas, resolviendo sus dudas en el transcurso de la clase, dejando tareas y pequeños proyectos para reforzar lo aprendido. Finalmente, realizamos deploy en vercel del proyecto ecomerce que con Front-end (JS React) y Api Rest (Python Flask)",
+  },
+  {
+    image: "ggtech.jpeg",
     title: "Full Stack Developer",
-    company: "Agencia Digital Premium",
-    period: "2021 - 2023",
+    company: "GGTech Entertainment",
+    period: "2022 - 2025",
     description:
-      "Desarrollé 15+ proyectos web para empresas del sector e-commerce y SaaS. Implementé soluciones de alta performance con Next.js, TypeScript y PostgreSQL.",
+      "Desarrollé y optimicé múltiples formatos de competición en la plataforma, mejorando la experiencia de usuario y aumentando la tasa de participación en un 30%, además de crear scripts para migración y actualización de bases de datos.  Analicé y optimicé el rendimiento de las aplicaciones, logrando una reducción del tiempo de carga en un 35% mediante mejoras en el manejo de sockets y optimización de consultas a la base de datos, implementando mejoras que resultaron en una reducción del tiempo de carga y una experiencia de usuario más fluida. Analicé y optimicé el rendimiento de las aplicaciones, implementando mejoras que resultaron en una reducción del tiempo de carga y una experiencia de usuario más fluida.",
   },
   {
-    type: "education",
-    title: "Licenciatura en Ingeniería de Sistemas",
-    company: "Universidad Nacional",
-    period: "2018 - 2022",
-    description: "Especialización en Desarrollo Web y Arquitectura de Software. Promedio acumulado: 4.2/5.0",
+    image: "logo-dgd-quito.png",
+    title: "Mentor / Ponente / Charlas / Talleres",
+    company: "Google Developer Group Quito",
+    period: "2023 - 2025",
+    description: "Como mentor, brindé orientación y apoyo técnico a estudiantes y desarrolladores interesados en tecnología. Como ponente, compartí mis conocimientos y experiencias en charlas y talleres, y como charlista, participé en eventos y comunidades tecnológicas para compartir mis conocimientos y experiencias.",
   },
   {
-    type: "work",
-    title: "Desarrollador Frontend",
-    company: "Freelancer Independiente",
+    image: "meniuz.jpeg",
+    title: "Tech Lead / Full Stack Development / SRE",
+    company: "Meniuz",
+    period: "2021 - 2025",
+    description: "Crear infraestructura escalable para gestionar miles de restaurantes, cafeterías, heladerías y licorerías del Ecuador, ayudando al turista en la decisión gastronómica del lugar, esto incluye precio, ambiente, servicio en general y menú. Implementé pipelines de CI/CD mediante Docker y GitHub, reduciendo el tiempo de despliegue. Automaticé procesos de scraping para actualizar datos en tiempo real, reduciendo los errores manuales",
+  },
+  {
+    image: "ativar.jpeg",
+    title: "Full Stack Developer",
+    company: "Ativar",
+    period: "2021 - 2022",
+    description: "Consultoría en desarrollo de aplicaciones web y móviles multiplataforma, incluyendo la interacción directa con clientes para la recopilación de requerimientos y especificaciones técnicas. Administración y subida de Aplicaciones móviles a tiendas como Play Store, Apple Store y AppGallery",
+  },
+  {
+    image: "good-better.jpeg",
+    title: "Full Stack Developer",
+    company: "Good Better Best",
     period: "2020 - 2021",
-    description:
-      "Creé interfaces modernas y responsivas para startups. Portfolio incluye 10+ proyectos en React y Vue.js.",
+    description: "Conectar y manejar API de YouTube para abstraer información de canales, perfiles, videos y meta datos de videos. Esto con el fin de verificar los pasos que se requiere en el modelo de negocio, como menciones, etiquetas o links en la descripción del video.",
   },
   {
-    type: "certification",
-    title: "Full Stack Development Bootcamp",
-    company: "Coding Academy Premium",
-    period: "2019 - 2020",
-    description:
-      "Certificación intensiva en desarrollo full stack. Proyecto final: plataforma de e-learning con 50k+ usuarios.",
-  },
-  {
-    type: "certification",
-    title: "AWS Solutions Architect Associate",
-    company: "Amazon Web Services",
-    period: "2023",
-    description: "Certificación en diseño de arquitecturas en la nube. Experiencia en EC2, S3, Lambda y RDS.",
+    image: "platzi.jpeg",
+    title: "Software Engineer (educación online)",
+    company: "Platzi",
+    period: "2018 - 2025",
+    description: "Realicé cursos en programación, diseño web, marketing digital, SEO, entre otros, para mejorar mis habilidades y conocimientos, y poder aplicarlos en mis proyectos y en la vida cotidiana.",
   },
 ]
-
-function getIcon(type: string) {
-  switch (type) {
-    case "work":
-      return <Briefcase className="w-5 h-5" />
-    case "education":
-      return <GraduationCap className="w-5 h-5" />
-    case "certification":
-      return <Award className="w-5 h-5" />
-    default:
-      return <Briefcase className="w-5 h-5" />
-  }
-}
 
 export function Experience() {
   return (
@@ -87,7 +94,7 @@ export function Experience() {
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                    {getIcon(exp.type)}
+                    <Image src={exp.image} alt={exp.title} width={48} height={48} />
                   </div>
                 </div>
                 <div className="flex-1">

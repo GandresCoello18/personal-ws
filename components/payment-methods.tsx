@@ -18,6 +18,16 @@ const paymentMethods: PaymentMethod[] = [
     description: "Transferencia bancaria local",
   },
   {
+    name: "Bancos de Estados Unidos",
+    icon: "🇺🇸",
+    description: "Transferencia bancaria internacional",
+  },
+  {
+    name: "Bancos de Europa",
+    icon: "🇪🇺",
+    description: "Transferencia bancaria internacional",
+  },
+  {
     name: "PayPal",
     icon: "🅿️",
     description: "Pagos internacionales",
@@ -26,16 +36,6 @@ const paymentMethods: PaymentMethod[] = [
     name: "Airtm",
     icon: "💳",
     description: "Plataforma de pagos digital",
-  },
-  {
-    name: "Banco de Estados Unidos",
-    icon: "🇺🇸",
-    description: "Transferencia bancaria internacional",
-  },
-  {
-    name: "Banco de Europa",
-    icon: "🇪🇺",
-    description: "Transferencia bancaria internacional",
   },
   {
     name: "Deel",

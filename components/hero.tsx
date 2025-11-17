@@ -25,9 +25,6 @@ export function Hero() {
             </div>
 
             <div className="space-y-4">
-              <div className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                ✨ Bienvenido a mi portafolio
-              </div>
               <h1 className="section-title">
                 Desarrollo de Software con
                 <span className="text-accent"> Impacto</span>

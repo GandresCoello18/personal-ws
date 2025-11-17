@@ -1,3 +1,5 @@
+"use client"
+
 import type React from "react"
 import { Users, BookOpen, Zap, Code2, Video, Award } from "lucide-react"
 
@@ -83,6 +85,14 @@ const services: Service[] = [
 ]
 
 export function Services() {
+  const handleServiceRequest = (serviceTitle: string, serviceDescription: string) => {
+    const params = new URLSearchParams({
+      service: serviceTitle,
+      description: serviceDescription,
+    })
+    window.location.href = `#contact?${params.toString()}`
+  }
+
   return (
     <section id="services" className="py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-6xl mx-auto">
@@ -124,9 +134,12 @@ export function Services() {
                   <p className="text-2xl font-bold text-primary">{service.price}</p>
                   <p className="text-sm text-muted-foreground">{service.duration}</p>
                 </div>
-                <a href="#contact" className="btn-primary w-full text-center">
+                <button
+                  onClick={() => handleServiceRequest(service.title, service.description)}
+                  className="btn-primary w-full text-center"
+                >
                   Solicitar Información
-                </a>
+                </button>
               </div>
             </div>
           ))}
