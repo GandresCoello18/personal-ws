@@ -22,7 +22,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: "1",
-    title: "Meniuz App",
+    title: "Meniuz",
     description:
       "Meniuz es una aplicación móvil y web que permite a los usuarios encontrar y descubrir la castronomia de las dintintas ciudades del Ecuador, entran categorias como: restaurantes, cafeterias, heladerias y licorerias.",
     images: [
@@ -67,7 +67,22 @@ const projects: Project[] = [
   },
   {
     id: "3",
-    title: "Spotify Clone App",
+    title: "Torneo de League of Legends",
+    description:
+      "Torneo de League of Legends organizado por GG Tech, permite a los usuarios ver el historial de partidos, estadisticas de los jugadores, y mas, ademas de poder inscribirte en los torneos como jugador individual o por equipo.",
+    images: [
+      "/ggtech-info-match.png",
+      "/ggtech-bracket.png",
+      "/ggtech-info-round.png",
+      "ggtech-info-tournament.png"
+    ],
+    tags: ["Meteor.js", "Blade", "Socket.io", "Api", "OAuth2", "MongoDB", "Redis"],
+    link: "https://universityesportsna.riotgames.com/competition/tournament/clol-fall-warmup/stage/shurima-group-stage?group=651b79b996fd110d91b12460",
+    featured: false,
+  },
+  {
+    id: "4",
+    title: "Spotify Clone",
     description:
       "Spotify Clone App es una aplicación web que permite a los usuarios escuchar musica, crear playlists, conocer artistas y sus albunes, puedes agregar o quitar de tus favoritos y se vera reflejado en tu perfil origial de Spotify.",
     images: [
@@ -87,7 +102,6 @@ export function Projects() {
 
   const handleShowAll = () => {
     setShowAll(true)
-    // Hacer scroll suave a la sección de proyectos adicionales después de un pequeño delay
     setTimeout(() => {
       const projectsSection = document.getElementById("projects")
       if (projectsSection && otherProjects.length > 0) {

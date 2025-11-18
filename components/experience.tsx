@@ -68,12 +68,22 @@ const experiences: ExperienceItem[] = [
     period: "2020 - 2021",
     description: "Conectar y manejar API de YouTube para abstraer información de canales, perfiles, videos y meta datos de videos. Esto con el fin de verificar los pasos que se requiere en el modelo de negocio, como menciones, etiquetas o links en la descripción del video.",
   },
+]
+
+const educations: ExperienceItem[] = [
   {
     image: "platzi.jpeg",
     title: "Software Engineer (educación online)",
     company: "Platzi",
     period: "2018 - 2025",
     description: "Realicé cursos en programación, diseño web, marketing digital, SEO, entre otros, para mejorar mis habilidades y conocimientos, y poder aplicarlos en mis proyectos y en la vida cotidiana.",
+  },
+  {
+    image: "ISTB-02-3.png",
+    title: "Tecnologo en Desarrollo de Software",
+    company: "ISTB Babahoyo",
+    period: "2018 - 2021",
+    description: "Tecnologo en Desarrollo de Software, con especialización en Desarrollo de Aplicaciones Móviles y Desarrollo de Aplicaciones Web. Realicé cursos en programación, diseño web, marketing digital, SEO, entre otros, para mejorar mis habilidades y conocimientos, y poder aplicarlos en mis proyectos y en la vida cotidiana.",
   },
 ]
 
@@ -82,7 +92,7 @@ export function Experience() {
     <section id="experience" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="section-title">Experiencia y Educación</h2>
+          <h2 className="section-title">Experiencia</h2>
           <p className="section-subtitle max-w-2xl mx-auto">
             Recorrido profesional combinando años de desarrollo y mentoría de talento
           </p>
@@ -90,6 +100,37 @@ export function Experience() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {experiences.map((exp, idx) => (
+            <div key={idx} className="card-elevated p-6 md:p-8 border-l-4 border-l-accent">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                    <Image src={exp.image} alt={exp.title} width={48} height={48} />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
+                    <div>
+                      <h3 className="text-lg md:text-xl font-bold text-foreground">{exp.title}</h3>
+                      <p className="text-accent font-medium">{exp.company}</p>
+                    </div>
+                    <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">{exp.period}</span>
+                  </div>
+                  <p className="text-muted-foreground mt-3 leading-relaxed">{exp.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center space-y-4 my-16">
+          <h2 className="section-title">Educación</h2>
+          <p className="section-subtitle max-w-2xl mx-auto">
+            Recorrido educatico en linea y presencial
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+          {educations.map((exp, idx) => (
             <div key={idx} className="card-elevated p-6 md:p-8 border-l-4 border-l-accent">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">

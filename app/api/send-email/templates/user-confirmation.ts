@@ -21,9 +21,11 @@ export function getUserConfirmationTemplate(nombre: string, asunto: string, mens
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                 <tr>
                   <td align="center">
-                    <div style="width: 80px; height: 80px; background-color: rgba(255,255,255,0.2); border-radius: 50%; display: inline-block; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                      <span style="color: #ffffff; font-size: 36px; font-weight: bold;">AC</span>
-                    </div>
+                    <img 
+                      src="https://andres-coello-goyes.vercel.app/me.jpg" 
+                      alt="Andres Coello" 
+                      style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;"
+                    />
                     <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600;">Andres Coello</h1>
                     <p style="margin: 8px 0 0 0; color: rgba(255,255,255,0.9); font-size: 14px;">Software Developer & Mentor</p>
                   </td>
@@ -77,11 +79,11 @@ export function getUserConfirmationTemplate(nombre: string, asunto: string, mens
                   </td>
                   <td style="padding: 0 10px; color: #ccc;">|</td>
                   <td style="padding: 0 10px;">
-                    <a href="https://www.linkedin.com/in/andres-coello" style="color: #1c4e5a; text-decoration: none; font-size: 14px;">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/andrescoellogoyes/" style="color: #1c4e5a; text-decoration: none; font-size: 14px;">LinkedIn</a>
                   </td>
                   <td style="padding: 0 10px; color: #ccc;">|</td>
                   <td style="padding: 0 10px;">
-                    <a href="https://twitter.com/andrescoello" style="color: #1c4e5a; text-decoration: none; font-size: 14px;">Twitter</a>
+                    <a href="https://x.com/acoellogoyes" style="color: #1c4e5a; text-decoration: none; font-size: 14px;">Twitter</a>
                   </td>
                 </tr>
               </table>
