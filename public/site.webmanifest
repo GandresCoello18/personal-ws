@@ -9,12 +9,12 @@
   "lang": "es",
   "icons": [
     {
-      "src": "/icon-light-32x32.png",
+      "src": "/me.jpg",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "/icon-dark-32x32.png",
+      "src": "/me.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
