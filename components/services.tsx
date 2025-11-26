@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { Users, BookOpen, Zap, Code2, Video, Award } from "lucide-react"
+import { Users, BookOpen, Zap, Code2, Video, Award, Globe, Smartphone, Monitor } from "lucide-react"
 
 interface Service {
   icon: React.ReactNode
@@ -61,6 +61,45 @@ const services: Service[] = [
     price: "Contactar",
     duration: "flexible",
   },
+  {
+    icon: <Globe className="w-8 h-8" />,
+    title: "Desarrollo Web",
+    description: "Aplicaciones web modernas y escalables. Proyectos a largo plazo o freelance con acompañamiento completo.",
+    features: [
+      "Aplicaciones web full-stack",
+      "Arquitectura escalable",
+      "Acompañamiento durante todo el proyecto",
+      "Soporte y mantenimiento",
+    ],
+    price: "Contactar",
+    duration: "proyecto",
+  },
+  {
+    icon: <Monitor className="w-8 h-8" />,
+    title: "Desarrollo Móvil Multiplataforma",
+    description: "Aplicaciones móviles multiplataforma para iOS y Android. Una sola base de código, múltiples plataformas.",
+    features: [
+      "React Native / Flutter",
+      "iOS y Android simultáneamente",
+      "Acompañamiento técnico completo",
+      "Deploy y publicación",
+    ],
+    price: "Contactar",
+    duration: "proyecto",
+  },
+  {
+    icon: <Smartphone className="w-8 h-8" />,
+    title: "Desarrollo Móvil Nativo",
+    description: "Aplicaciones nativas para iOS (Swift) y Android (Kotlin). Máximo rendimiento y experiencia de usuario.",
+    features: [
+      "iOS nativo (Swift)",
+      "Android nativo (Kotlin)",
+      "Optimización de performance",
+      "Acompañamiento especializado",
+    ],
+    price: "Contactar",
+    duration: "proyecto",
+  },
   /*{
     icon: <Code2 className="w-8 h-8" />,
     title: "Code Review Profundo",
@@ -110,12 +149,11 @@ export function Services() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <div className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
-            Servicios de Mentoría
+            Servicios Profesionales
           </div>
-          <h2 className="section-title">Impulsemos tu Carrera</h2>
+          <h2 className="section-title">Impulsemos tu Carrera y Proyectos</h2>
           <p className="section-subtitle max-w-3xl mx-auto">
-            Acceso a mentoría, cursos y consultoría con un experto en desarrollo web. Diseñado para acelerar tu
-            crecimiento profesional.
+            Acceso a mentoría, cursos, consultoría y desarrollo de software. Diseñado para acelerar tu crecimiento profesional y llevar tus ideas al siguiente nivel.
           </p>
         </div>
 

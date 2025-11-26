@@ -10,6 +10,13 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    image: "meniuz.jpeg",
+    title: "CTO / Tech Lead / SRE",
+    company: "Meniuz",
+    period: "2021 - 2025",
+    description: "Crear infraestructura escalable para gestionar miles de restaurantes, cafeterías, heladerías y licorerías del Ecuador, ayudando al turista en la decisión gastronómica del lugar, esto incluye precio, ambiente, servicio en general y menú. Implementé pipelines de CI/CD mediante Docker y GitHub, reduciendo el tiempo de despliegue. Automaticé procesos de scraping para actualizar datos en tiempo real, reduciendo los errores manuales",
+  },
+  {
     image: "mims_tech_corp_logo.jpg",
     title: "Semi-Senior Backend Developer",
     company: "MIMS Tech Corp",
@@ -46,13 +53,6 @@ const experiences: ExperienceItem[] = [
     company: "Google Developer Group Quito",
     period: "2023 - 2025",
     description: "Como mentor, brindé orientación y apoyo técnico a estudiantes y desarrolladores interesados en tecnología. Como ponente, compartí mis conocimientos y experiencias en charlas y talleres, y como charlista, participé en eventos y comunidades tecnológicas para compartir mis conocimientos y experiencias.",
-  },
-  {
-    image: "meniuz.jpeg",
-    title: "Tech Lead / Full Stack Development / SRE",
-    company: "Meniuz",
-    period: "2021 - 2025",
-    description: "Crear infraestructura escalable para gestionar miles de restaurantes, cafeterías, heladerías y licorerías del Ecuador, ayudando al turista en la decisión gastronómica del lugar, esto incluye precio, ambiente, servicio en general y menú. Implementé pipelines de CI/CD mediante Docker y GitHub, reduciendo el tiempo de despliegue. Automaticé procesos de scraping para actualizar datos en tiempo real, reduciendo los errores manuales",
   },
   {
     image: "ativar.jpeg",

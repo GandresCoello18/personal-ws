@@ -26,6 +26,12 @@ const jsonLd = {
     "Desarrollo Full Stack",
     "Next.js",
     "React",
+    "Node.js",
+    "Python",
+    "Docker",
+    "Git",
+    "GitLab CI/CD",
+    "GitLab CI/CD",
     "Mentoría tecnológica",
     "Tutorías personalizadas",
   ],
@@ -81,7 +87,7 @@ export const metadata: Metadata = {
     siteName: "Andres Coello",
     images: [
       {
-        url: "",
+        url: `${siteUrl}/profile.jpeg`,
         width: 1200,
         height: 630,
         alt: "Vista previa del portafolio y servicios de Andres Coello",
@@ -105,8 +111,8 @@ export const metadata: Metadata = {
     icon: [
       { url: "/me.svg", type: "image/svg+xml" },
     ],
-    apple: "/me.jpg",
-    shortcut: "/me.jpg",
+    apple: "/profile.jpeg",
+    shortcut: "/profile.jpeg",
   },
   manifest: "/site.webmanifest",
   themeColor: "#1c4e5a",

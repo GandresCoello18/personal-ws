@@ -6,6 +6,18 @@ import Image from 'next/image'
 
 const classesData = [
   {
+    id: 14,
+    title: 'Conferencia en Quito Cumbaya / DevFest 2023',
+    description: 'DevTools es mas que usar la consola de Chrome, hay mas herramientas que podemos usar para mejorar nuestro desarrollo.',
+    image: 'conf-quito-cumbaya.jpg',
+  },
+  {
+    id: 15,
+    title: 'Conferencia en Quito Cumbaya / DevFest 2023',
+    description: 'DevTools es mas que usar la consola de Chrome, hay mas herramientas que podemos usar para mejorar nuestro desarrollo.',
+    image: 'conf-quito-cumbaya-2.jpeg',
+  },
+  {
     id: 1,
     title: 'Explorando y primeros pasos en Reat Native / Santiago 🇩🇴',
     description: 'Aplicativo móbil para emergencias, y botón de pánico. Ligado a un servidor de Express y MySQL',
@@ -82,18 +94,6 @@ const classesData = [
     title: 'Live de Platzi',
     description: 'En esta charla comparto mi experiencia como entre a trabajar como desarrollador en el mundo del Esport, explicando lo que tuve que hacer para poder entrar al mercado de trabajo.',
     image: 'andres-coello-live-platzi.png',
-  },
-  {
-    id: 14,
-    title: 'Conferencia en Quito Cumbaya / DevFest 2023',
-    description: 'DevTools es mas que usar la consola de Chrome, hay mas herramientas que podemos usar para mejorar nuestro desarrollo.',
-    image: 'conf-quito-cumbaya.jpg',
-  },
-  {
-    id: 15,
-    title: 'Conferencia en Quito Cumbaya / DevFest 2023',
-    description: 'DevTools es mas que usar la consola de Chrome, hay mas herramientas que podemos usar para mejorar nuestro desarrollo.',
-    image: 'conf-quito-cumbaya-2.jpeg',
   },
 ]
 
