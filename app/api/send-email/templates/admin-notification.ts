@@ -102,14 +102,7 @@ export function getAdminNotificationTemplate(nombre: string, email: string, asun
           <tr>
             <td style="background-color: #f8f9fa; padding: 25px 30px; text-align: center; border-radius: 0 0 8px 8px; border-top: 1px solid #e0e0e0;">
               <p style="margin: 0; color: #6b7280; font-size: 12px; line-height: 1.5;">
-                Este mensaje fue generado automáticamente desde tu portafolio web.<br />
-                <strong>Fecha:</strong> ${new Date().toLocaleString('es-ES', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric', 
-                  hour: '2-digit', 
-                  minute: '2-digit' 
-                })}
+                Este mensaje fue generado automáticamente desde tu portafolio web.
               </p>
             </td>
           </tr>

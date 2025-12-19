@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { Users, BookOpen, Zap, Code2, Video, Award, Globe, Smartphone, Monitor } from "lucide-react"
+import { Users, BookOpen, Zap, Video, Globe, Smartphone, Monitor } from "lucide-react"
 
 interface Service {
   icon: React.ReactNode
