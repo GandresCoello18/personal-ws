@@ -44,30 +44,29 @@ const projects: Project[] = [
   },
   {
     id: "2",
-    title: "Dashboard Padel Track",
+    title: "Chimborazo cerca del sol",
     description:
-      "Dashboard interactivo para el seguimiento de partidos de padel, permite a los usuarios ver el historial de partidos, estadisticas de los jugadores, y mas, ademas de poder crear partidos jugadores y coach.",
+      "Este proyecto muestra de manera educativa por que a pesar de que el volcan Chimborazo ubicado en el Ecuador, no es el mas grande pero si el mas cercano al sol.",
     images: [
-      "/videos-cuestionario.jpeg",
-      "/padeltrack-public.png",
-      "/unnamed (1).webp",
-      "/unnamed (2).webp",
-      "/unnamed (3).webp",
+      "/chimborazo-01.png",
+      "/chimborazo-02.png",
+      "/chimborazo-03.png",
+      "/chimborazo-04.png",
     ],
-    tags: ["React", "Socket.io", "Express.js", "CI/CD", "MongoDB", "Chart.js", "Vimeo", "Monolito", "Arquitectura Modular"],
-    link: "https://admin.padeltrack.app/",
+    tags: ["Svelte", "3D CSS", "HTML", "TypeScript", "Vercel"],
+    link: "https://chimborazo-near-the-sun.vercel.app",
     github: "",
-    isPrivate: true,
+    isPrivate: false,
     featured: true,
     stats: [
-      { label: "Partidos", value: "10k+" },
-      { label: "Jugadores", value: "100+" },
-      { label: "Coachs", value: "10+" },
+      { label: "Volcan", value: "1" },
+      { label: "Imagenes", value: "6" },
+      { label: "Videos", value: "6" },
     ],
   },
   {
     id: "3",
-    title: "Torneo de League of Legends",
+    title: "GG Tech panel publico",
     description:
       "Torneo de League of Legends organizado por GG Tech, permite a los usuarios ver el historial de partidos, estadisticas de los jugadores, y mas, ademas de poder inscribirte en los torneos como jugador individual o por equipo.",
     images: [
@@ -82,6 +81,18 @@ const projects: Project[] = [
   },
   {
     id: "4",
+    title: "GG Tech panel admin",
+    description: "Panel admin de GG Tech, gestiona los torneos, etapas, grupos, rondas y partidos ademas de los equipos, los jugadores, y mas.",
+    images: [
+      "/admin-ggtech-02.png",
+      "/admin-ggtech-01.png",
+    ],
+    tags: ["Meteor.js", "Socket.io", "Api", "OAuth2", "MongoDB", "Redis"],
+    link: "https://ggtech.gg/",
+    featured: false,
+  },
+  {
+    id: "5",
     title: "Spotify Clone",
     description:
       "Spotify Clone App es una aplicación web que permite a los usuarios escuchar musica, crear playlists, conocer artistas y sus albunes, puedes agregar o quitar de tus favoritos y se vera reflejado en tu perfil origial de Spotify.",
@@ -92,6 +103,29 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Api", "Spotify API"],
     link: "https://andres-coello-full-stack.vercel.app/",
     featured: false,
+  },
+  {
+    id: "6",
+    title: "Dashboard Padel Track",
+    description:
+      "Dashboard interactivo para el seguimiento de partidos de padel, permite a los usuarios ver el historial de partidos, estadisticas de los jugadores, y mas, ademas de poder crear partidos jugadores y coach.",
+    images: [
+      "/videos-cuestionario.jpeg",
+      "/padeltrack-public.png",
+      "/unnamed (1).webp",
+      "/unnamed (2).webp",
+      "/unnamed (3).webp",
+    ],
+    tags: ["React", "Socket.io", "Express.js", "CI/CD", "MongoDB", "Chart.js", "Vimeo", "Monolito", "Arquitectura Modular"],
+    link: "https://admin.padeltrack.app/",
+    github: "",
+    isPrivate: true,
+    featured: false,
+    stats: [
+      { label: "Partidos", value: "10k+" },
+      { label: "Jugadores", value: "100+" },
+      { label: "Coachs", value: "10+" },
+    ],
   },
 ]
 
@@ -104,7 +138,7 @@ export function Projects() {
     setShowAll(true)
     setTimeout(() => {
       const projectsSection = document.getElementById("projects")
-      if (projectsSection && otherProjects.length > 0) {
+      if (projectsSection && otherProjects.length) {
         const additionalProjectsElement = projectsSection.querySelector('[data-additional-projects]')
         if (additionalProjectsElement) {
           additionalProjectsElement.scrollIntoView({ behavior: "smooth", block: "start" })

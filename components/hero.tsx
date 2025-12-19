@@ -26,11 +26,11 @@ export function Hero() {
 
             <div className="space-y-4">
               <h1 className="section-title">
-                Desarrollo de Software con
+                Creacion de productos digitales con
                 <span className="text-accent"> Impacto</span>
               </h1>
               <p className="section-subtitle">
-                Full Stack Developer, DevOps, Mentor y Tutor especializado en crear soluciones web escalables mientras enseño a
+                Software Enginner, SRE, Mentor y Tutor especializado en crear soluciones web escalables mientras enseño a
                 la próxima generación de desarrolladores.
               </p>
             </div>
@@ -95,7 +95,7 @@ export function Hero() {
             </div>
 
             <div className="bg-white/90 dark:bg-slate-950/90 backdrop-blur rounded-full px-6 py-3 shadow-lg">
-              <p className="text-sm font-semibold text-foreground">💻 Full Stack Dev + 🎓 Mentor</p>
+              <p className="text-sm font-semibold text-foreground">💻 Software Engineer Dev + 🎓 Mentor</p>
             </div>
           </div>
         </div>

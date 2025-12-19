@@ -13,16 +13,16 @@ const experiences: ExperienceItem[] = [
     image: "meniuz.jpeg",
     title: "CTO / Tech Lead / SRE",
     company: "Meniuz",
-    period: "2021 - 2025",
-    description: "Crear infraestructura escalable para gestionar miles de restaurantes, cafeterías, heladerías y licorerías del Ecuador, ayudando al turista en la decisión gastronómica del lugar, esto incluye precio, ambiente, servicio en general y menú. Implementé pipelines de CI/CD mediante Docker y GitHub, reduciendo el tiempo de despliegue. Automaticé procesos de scraping para actualizar datos en tiempo real, reduciendo los errores manuales",
+    period: "2021 - Presente",
+    description: "Crear infraestructura escalable para gestionar miles de restaurantes, cafeterías, heladerías y licorerías del Ecuador, ayudando al turista en la decisión gastronómica del lugar, esto incluye precio, ambiente, servicio en general y menú. Implementé pipelines de CI/CD use Docker, Redis y Qdrant, para obtener una busqueda avanzada por coincidencias mediante vectores y respuestas rapdias optimizadas. Mi rol de CTO me ayuda a liderar el equipo de desarrollo y en la toma de decisiones para la empresa con respecto a herramientas y tecnologias.",
   },
   {
     image: "mims_tech_corp_logo.jpg",
     title: "Semi-Senior Backend Developer",
     company: "MIMS Tech Corp",
-    period: "2025 - Presente",
+    period: "2025 - 2025",
     description:
-      "Lidero el desarrollo de un SDK orientado a facilitar la integración de múltiples servicios y funcionalidades mediante paquetes npm. Mi rol incluye la definición de la arquitectura, diseño de APIs internas, aseguramiento de calidad del código y aplicación de estándares de seguridad, incluyendo Row-Level Security (RLS) para el control granular de acceso a los datos. Además, colaboro estrechamente con equipos de producto y QA para garantizar la escalabilidad, mantenibilidad y cumplimiento de las mejores prácticas de desarrollo seguro en entornos modernos de distribución de software.",
+      "Lideré el desarrollo de un SDK orientado a facilitar la integración de múltiples servicios y funcionalidades mediante paquetes npm. Mi rol incluye la definición de la arquitectura, diseño de APIs internas, aseguramiento de calidad del código y aplicación de estándares de seguridad, incluyendo Row-Level Security (RLS) para el control granular de acceso a los datos. Además, colaboro estrechamente con equipos de producto y QA para garantizar la escalabilidad, mantenibilidad y cumplimiento de las mejores prácticas de desarrollo seguro en entornos modernos de distribución de software.",
   },
   {
     image: "classgap_logo.jpg",
@@ -52,7 +52,7 @@ const experiences: ExperienceItem[] = [
     title: "Mentor / Ponente / Charlas / Talleres",
     company: "Google Developer Group Quito",
     period: "2023 - 2025",
-    description: "Como mentor, brindé orientación y apoyo técnico a estudiantes y desarrolladores interesados en tecnología. Como ponente, compartí mis conocimientos y experiencias en charlas y talleres, y como charlista, participé en eventos y comunidades tecnológicas para compartir mis conocimientos y experiencias.",
+    description: "Como mentor, brindé orientación y apoyo técnico a estudiantes y desarrolladores interesados en tecnología. Como ponente, compartí mis conocimientos y experiencias en charlas y talleres, y como charlista, participé en eventos y comunidades tecnológicas para compartir mis conocimientos y experiencias. Me gusta conocer mas de cerca a la proxima generación de desarrolladores para ayudarlos a crecer en su carrera y en su vida personal.",
   },
   {
     image: "ativar.jpeg",
@@ -76,7 +76,7 @@ const educations: ExperienceItem[] = [
     title: "Software Engineer (educación online)",
     company: "Platzi",
     period: "2018 - 2025",
-    description: "Realicé cursos en programación, diseño web, marketing digital, SEO, entre otros, para mejorar mis habilidades y conocimientos, y poder aplicarlos en mis proyectos y en la vida cotidiana.",
+    description: "Realicé cursos y carreras en el area de programación, diseño web, marketing digital, SEO, entre otros, para mejorar mis habilidades y conocimientos, y poder aplicarlos en mis proyectos y en la vida cotidiana.",
   },
   {
     image: "ISTB-02-3.png",

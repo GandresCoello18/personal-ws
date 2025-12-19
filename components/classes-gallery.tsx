@@ -6,14 +6,32 @@ import Image from 'next/image'
 
 const classesData = [
   {
+    id: 16,
+    title: 'Staff y Speakers / DevFest Ecuador 2025',
+    description: 'El DevFest 2025 fue una experiencia increible, me encanto poder ser parte de este evento y poder compartir mis conocimientos con la comunidad.',
+    image: '1764597984863.jpg',
+  },
+  {
+    id: 17,
+    title: 'Conferencia en Quito Cumbaya / DevFest Ecuador 2025',
+    description: 'En este espacio compartie mi experiencia como desarrollador en el mundo deportivo electronico y como estar abierto a nuevas herramientas como tecnologias y frameworks.',
+    image: '1764597973595.jpg',
+  },
+  {
+    id: 18,
+    title: 'Conferencia en Quito Cumbaya / DevFest Ecuador 2023',
+    description: 'DevTools es mas que usar la consola de Chrome, hay mas herramientas que podemos usar para mejorar nuestro desarrollo.',
+    image: 'conf-quito-cumbaya.jpg',
+  },
+  {
     id: 14,
-    title: 'Conferencia en Quito Cumbaya / DevFest 2023',
+    title: 'Conferencia en Quito Cumbaya / DevFest Ecuador 2023',
     description: 'DevTools es mas que usar la consola de Chrome, hay mas herramientas que podemos usar para mejorar nuestro desarrollo.',
     image: 'conf-quito-cumbaya.jpg',
   },
   {
     id: 15,
-    title: 'Conferencia en Quito Cumbaya / DevFest 2023',
+    title: 'Conferencia en Quito Cumbaya / DevFest Ecuador 2023',
     description: 'DevTools es mas que usar la consola de Chrome, hay mas herramientas que podemos usar para mejorar nuestro desarrollo.',
     image: 'conf-quito-cumbaya-2.jpeg',
   },

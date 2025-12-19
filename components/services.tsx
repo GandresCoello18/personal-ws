@@ -19,12 +19,12 @@ const services: Service[] = [
     description:
       "Sesiones personalizadas para acelerar tu desarrollo profesional. Guía directa y retroalimentación.",
     features: [
-      "Sesiones de 1 hora personalizadas",
+      "Sesiones de 1 hora y 20 minutos personalizadas",
       "Revisión de código en vivo",
       "Ayuda en proyectos reales",
       "Acceso a recursos exclusivos",
     ],
-    price: "$12",
+    price: "$11.99",
     duration: "por sesión",
   },
   {
@@ -50,7 +50,7 @@ const services: Service[] = [
       "Optimización de performance",
       "Estrategia tecnológica",
     ],
-    price: "Desde $12",
+    price: "Desde $11.99",
     duration: "por sesión",
   },
   {
