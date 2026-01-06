@@ -55,7 +55,7 @@ const projects: Project[] = [
     ],
     tags: ["Svelte", "3D CSS", "HTML", "TypeScript", "Vercel"],
     link: "https://chimborazo-near-the-sun.vercel.app",
-    github: "",
+    github: "https://github.com/GandresCoello18/Chimborazo-near-the-sun",
     isPrivate: false,
     featured: true,
     stats: [
@@ -66,6 +66,42 @@ const projects: Project[] = [
   },
   {
     id: "3",
+    title: "Collage Unsplash con Astro",
+    description: "Collage de imagenes de Unsplash con Astro, permite a los usuarios ver las imagenes de Unsplash y agregarlas a un collage para luego descargarlo en el equipo local y almacenarlo en el navegador para su futura consulta.",
+    images: [
+      "/explore-collage-astro.png",
+      "/generate-collage-astro.png",
+      "/gallery-collage-astro.png",
+    ],
+    tags: ["Astro", "Island", "Vercel", "TypeScript", "Unsplash API"],
+    link: "https://unsplash-collage-astro.vercel.app",
+    github: "https://github.com/GandresCoello18/unsplash-collage-astro",
+    isPrivate: false,
+    featured: true,
+    stats: [
+      { label: "Api Unsplash", value: "1" },
+      { label: "Imagenes", value: "4" },
+    ],
+  },
+  {
+    id: "4",
+    title: "Image Intelligence Platform",
+    description: "Plataforma de procesamiento de imagenes, permite a los usuarios subir imagenes y procesarlas o extraier informacion de ellas para luego almacenarlas en el sistema para su futura consulta.",
+    images: [
+      "/image-process-inteligent.png",
+    ],
+    tags: ["Nx Workspace", "Redis", "Queue", "TypeScript", "docker", "MongoDB", "Minio"],
+    link: "https://github.com/GandresCoello18/image-intelligence-job",
+    github: "https://github.com/GandresCoello18/image-intelligence-job",
+    isPrivate: false,
+    featured: true,
+    stats: [
+      { label: "Procesamiento de imagenes", value: "1" },
+      { label: "Imagenes procesadas", value: "10+" },
+    ],
+  },
+  {
+    id: "5",
     title: "GG Tech panel publico",
     description:
       "Torneo de League of Legends organizado por GG Tech, permite a los usuarios ver el historial de partidos, estadisticas de los jugadores, y mas, ademas de poder inscribirte en los torneos como jugador individual o por equipo.",
@@ -80,7 +116,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: "4",
+    id: "6",
     title: "GG Tech panel admin",
     description: "Panel admin de GG Tech, gestiona los torneos, etapas, grupos, rondas y partidos ademas de los equipos, los jugadores, y mas.",
     images: [
@@ -92,7 +128,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: "5",
+    id: "7",
     title: "Spotify Clone",
     description:
       "Spotify Clone App es una aplicación web que permite a los usuarios escuchar musica, crear playlists, conocer artistas y sus albunes, puedes agregar o quitar de tus favoritos y se vera reflejado en tu perfil origial de Spotify.",
@@ -102,10 +138,11 @@ const projects: Project[] = [
     ],
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Api", "Spotify API"],
     link: "https://andres-coello-full-stack.vercel.app/",
+    github: "https://github.com/GandresCoello18/spotify-clone",
     featured: false,
   },
   {
-    id: "6",
+    id: "8",
     title: "Dashboard Padel Track",
     description:
       "Dashboard interactivo para el seguimiento de partidos de padel, permite a los usuarios ver el historial de partidos, estadisticas de los jugadores, y mas, ademas de poder crear partidos jugadores y coach.",
