@@ -2,6 +2,8 @@
 
 Portafolio web personal que presenta mis servicios como **Software Engineer, SRE, Mentor y Tutor**, especializado en desarrollo full-stack y enseñanza de programación.
 
+<img width="1005" height="483" alt="image" src="https://github.com/user-attachments/assets/61131f8e-cf87-44bd-b92a-4e7a324bba9f" />
+
 ## Propósito
 
 Este sitio web sirve como:
